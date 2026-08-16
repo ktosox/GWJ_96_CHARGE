@@ -1,9 +1,9 @@
-class_name CardData
+class_name CardData # holds a complete packege of data to fully describe a card
 extends Resource
 
-var name
+@export var name : String
 
-var energy_cost
+@export var energy_cost : int = 1
 
 
 

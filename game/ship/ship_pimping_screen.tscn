@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://duekx21053b43"]
+
+[ext_resource type="Script" uid="uid://05bigsvqyrg1" path="res://ship/ship_pimping_screen.gd" id="1_vougy"]
+
+[node name="ShipPimpingScreen" type="Control" unique_id=43276957]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vougy")

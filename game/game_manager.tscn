@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dt01ag6la31tt"]
+
+[ext_resource type="Script" uid="uid://3vmox1uy15j0" path="res://game_manager.gd" id="1_70yv6"]
+[ext_resource type="Script" uid="uid://bpc7pojq2jkg0" path="res://ship_data.gd" id="2_smx3j"]
+
+[sub_resource type="Resource" id="Resource_70yv6"]
+script = ExtResource("2_smx3j")
+name = "test ship"
+metadata/_custom_type_script = "uid://bpc7pojq2jkg0"
+
+[node name="GameManager" type="Node" unique_id=1719287768]
+script = ExtResource("1_70yv6")
+player_ship_data = SubResource("Resource_70yv6")

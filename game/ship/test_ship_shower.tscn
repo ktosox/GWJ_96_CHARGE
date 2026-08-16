@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b0jfvhlj04t3v"]
+
+[ext_resource type="PackedScene" uid="uid://clvgupby0v631" path="res://ship/ship_segment.tscn" id="1_2xc6m"]
+
+[node name="TestShipShower" type="Node3D" unique_id=474396500]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=921163301]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 3.071, 0)
+current = true
+fov = 59.3
+size = 1.965
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=4327451]
+
+[node name="SegmentsGoHere" type="Node3D" parent="." unique_id=1419794268]
+
+[node name="A" type="Node3D" parent="SegmentsGoHere" unique_id=1345839335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="ShipSegment4" parent="SegmentsGoHere/A" unique_id=2065565167 instance=ExtResource("1_2xc6m")]
+
+[node name="B" type="Node3D" parent="SegmentsGoHere" unique_id=1177455117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="ShipSegment3" parent="SegmentsGoHere/B" unique_id=1008841467 instance=ExtResource("1_2xc6m")]
+
+[node name="C" type="Node3D" parent="SegmentsGoHere" unique_id=740668111]
+
+[node name="ShipSegment" parent="SegmentsGoHere/C" unique_id=2031359853 instance=ExtResource("1_2xc6m")]
+
+[node name="D" type="Node3D" parent="SegmentsGoHere" unique_id=2098936926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="ShipSegment2" parent="SegmentsGoHere/D" unique_id=1413397396 instance=ExtResource("1_2xc6m")]
+
+[node name="E" type="Node3D" parent="SegmentsGoHere" unique_id=1613914118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="ShipSegment3" parent="SegmentsGoHere/E" unique_id=1333717934 instance=ExtResource("1_2xc6m")]

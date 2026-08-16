@@ -13,3 +13,7 @@ config_version=5
 config/name="Ima Firin Mah Broadside"
 config/features=PackedStringArray("4.7")
 config/icon="res://icon.png"
+
+[autoload]
+
+GameManager="*uid://dt01ag6la31tt"

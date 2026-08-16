@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://clvgupby0v631"]
+
+[ext_resource type="Script" uid="uid://dyw1puki1qpn0" path="res://ship/ship_segment.gd" id="1_ln070"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2xc6m"]
+size = Vector2(2, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_us223"]
+size = Vector2(0.5, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1qhx3"]
+top_radius = 1.2
+bottom_radius = 1.2
+height = 0.6
+radial_segments = 6
+
+[node name="ShipSegment" type="Node3D" unique_id=2065565167]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, 0)
+script = ExtResource("1_ln070")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1267490222]
+transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_2xc6m")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1162766373]
+transform = Transform3D(-4.371138e-08, 0, 1, -0.49999997, 0.8660254, -2.185569e-08, -0.86602527, -0.49999997, -3.7855166e-08, 0, -0.12914474, -1.2252796)
+mesh = SubResource("PlaneMesh_us223")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=664842215]
+transform = Transform3D(-3.199894e-08, -4.371139e-08, -1, -0.5, 0.8660254, -2.1855694e-08, 0.8660252, 0.49999997, -4.956761e-08, 0, -0.12914474, 1.229116)
+mesh = SubResource("PlaneMesh_us223")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1009949142]
+transform = Transform3D(-4.371139e-08, 0.40000004, 8.742278e-09, 0, -1.7484556e-08, 0.2, 1, 1.7484556e-08, 3.821371e-16, 0.35, 0, 0)
+mesh = SubResource("CylinderMesh_1qhx3")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1211656874]
+transform = Transform3D(-4.371139e-08, 0.40000007, 8.742278e-09, 0, -1.7484556e-08, 0.2, 1, 1.7484556e-08, 3.821371e-16, -0.35, 0, 0)
+mesh = SubResource("CylinderMesh_1qhx3")
