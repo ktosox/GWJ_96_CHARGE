@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://dtm4hi58n5r18"]
+
+[node name="ToDo" type="Control" unique_id=2066441326]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TurnManager" type="Label" parent="." unique_id=1088167868]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 52.0
+offset_right = 412.0
+offset_bottom = 153.0
+text = "Turn mananger
+- keeps track of whos turn is it now
+- emits signals whenever a specifc phase is reached
+- needs to know when to move on to the next phase"
+
+[node name="Background" type="Label" parent="." unique_id=1751967185]
+layout_mode = 0
+offset_left = 798.0
+offset_top = 18.0
+offset_right = 1130.0
+offset_bottom = 67.0
+text = "Background
+- something generally space-y and scrolling"
+
+[node name="Cards" type="Label" parent="." unique_id=1037502254]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 242.0
+offset_right = 343.0
+offset_bottom = 395.0
+text = "Cards
+- card drawing
+- deck tracking
+- holding cards in hand
+- using cards
+- translating cards to effects / components"
+
+[node name="Ship properties" type="Label" parent="." unique_id=828976099]
+layout_mode = 0
+offset_left = 758.0
+offset_top = 270.0
+offset_right = 877.0
+offset_bottom = 319.0
+text = "Ship properties
+- power
+- health
+- slots
+- how to show them?"
+
+[node name="Ship building" type="Label" parent="." unique_id=1449936910]
+layout_mode = 0
+offset_left = 804.0
+offset_top = 433.0
+offset_right = 1125.0
+offset_bottom = 560.0
+text = "Ship building
+- way of altering ship layout
+- ship stats change based on parts
+- various ship parts that can be unlocked
+"
+
+[node name="AI" type="Label" parent="." unique_id=98513129]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 509.0
+offset_right = 684.0
+offset_bottom = 636.0
+text = "AI
+- keeping track of cards in hand
+- keeping track ofgame state
+- checking if cards can be played
+- using cards at random"
+
+[node name="Components" type="Label" parent="." unique_id=606937735]
+layout_mode = 0
+offset_left = 363.0
+offset_top = 283.0
+offset_right = 462.0
+offset_bottom = 332.0
+text = "Components
+- can be placed on selected slots
+- usually need a trun to start working 
+- do something in specifc game phase
+- most can be turned off to not use power"
+
+[node name="Power system" type="Label" parent="." unique_id=1293884141]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 37.0
+offset_right = 788.0
+offset_bottom = 138.0
+text = "Power system
+- keeps track of avialbe power
+- resets aviable power at start of turn
+- has interface for components and actions"

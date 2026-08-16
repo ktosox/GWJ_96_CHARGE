@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://dtnv65f2a6rm4"]
+
+[ext_resource type="PackedScene" uid="uid://bievw1si2sopf" path="res://UI/test_card_place_holder.tscn" id="1_3ok48"]
+[ext_resource type="Script" uid="uid://w5cd5b2lyyba" path="res://UI/player_hand_space.gd" id="1_r62aa"]
+[ext_resource type="PackedScene" uid="uid://c8kgjw8cw1kpv" path="res://UI/card_slot.tscn" id="1_wc7ir"]
+[ext_resource type="Script" uid="uid://dkibpmidf16s6" path="res://UI/test_panel.gd" id="4_7krub"]
+
+[node name="PlayerHandSpace" type="Control" unique_id=146149326 node_paths=PackedStringArray("card_holder")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r62aa")
+card_holder = NodePath("Layout/HandCardsGoHere/CardHolder")
+
+[node name="Layout" type="VBoxContainer" parent="." unique_id=1941798894]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EmptySpace" type="Control" parent="Layout" unique_id=2066836820]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HandCardsGoHere" type="HBoxContainer" parent="Layout" unique_id=1028840843]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+alignment = 1
+
+[node name="LeftHandCutOff" type="Control" parent="Layout/HandCardsGoHere" unique_id=733314348]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CardHolder" type="HBoxContainer" parent="Layout/HandCardsGoHere" unique_id=1776029054]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+alignment = 1
+
+[node name="CardSlot" parent="Layout/HandCardsGoHere/CardHolder" unique_id=340209691 instance=ExtResource("1_wc7ir")]
+layout_mode = 2
+
+[node name="CardPlaceHolder" parent="Layout/HandCardsGoHere/CardHolder/CardSlot" unique_id=1167662447 instance=ExtResource("1_3ok48")]
+layout_mode = 2
+
+[node name="CardSlot2" parent="Layout/HandCardsGoHere/CardHolder" unique_id=309050838 instance=ExtResource("1_wc7ir")]
+layout_mode = 2
+
+[node name="CardPlaceHolder" parent="Layout/HandCardsGoHere/CardHolder/CardSlot2" unique_id=11876243 instance=ExtResource("1_3ok48")]
+layout_mode = 2
+
+[node name="CardSlot3" parent="Layout/HandCardsGoHere/CardHolder" unique_id=1731434841 instance=ExtResource("1_wc7ir")]
+layout_mode = 2
+
+[node name="CardPlaceHolder" parent="Layout/HandCardsGoHere/CardHolder/CardSlot3" unique_id=27393749 instance=ExtResource("1_3ok48")]
+layout_mode = 2
+
+[node name="CardSlot4" parent="Layout/HandCardsGoHere/CardHolder" unique_id=809822796 instance=ExtResource("1_wc7ir")]
+layout_mode = 2
+
+[node name="CardPlaceHolder" parent="Layout/HandCardsGoHere/CardHolder/CardSlot4" unique_id=96377281 instance=ExtResource("1_3ok48")]
+layout_mode = 2
+
+[node name="CardSlot5" parent="Layout/HandCardsGoHere/CardHolder" unique_id=2003610938 instance=ExtResource("1_wc7ir")]
+layout_mode = 2
+
+[node name="CardPlaceHolder" parent="Layout/HandCardsGoHere/CardHolder/CardSlot5" unique_id=1206698903 instance=ExtResource("1_3ok48")]
+layout_mode = 2
+
+[node name="RightHandCutOff" type="Control" parent="Layout/HandCardsGoHere" unique_id=614533242]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="test_panel" type="Panel" parent="." unique_id=403872244]
+layout_mode = 0
+offset_right = 1141.0
+offset_bottom = 203.0
+script = ExtResource("4_7krub")
+
+[node name="test_remove_card" type="Button" parent="test_panel" unique_id=609923391]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 16.0
+offset_right = 454.0
+offset_bottom = 47.0
+text = "test_remove_card
+"
+
+[node name="test_add_card" type="Button" parent="test_panel" unique_id=101404071]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 14.0
+offset_right = 293.0
+offset_bottom = 45.0
+text = "test_add_card"
+
+[connection signal="pressed" from="test_panel/test_remove_card" to="test_panel" method="_on_test_remove_card_pressed"]
+[connection signal="pressed" from="test_panel/test_add_card" to="test_panel" method="_on_test_add_card_pressed"]

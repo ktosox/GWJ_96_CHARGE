@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c8kgjw8cw1kpv"]
+
+[node name="CardSlot" type="HBoxContainer" unique_id=340209691]
+custom_minimum_size = Vector2(0, 160)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -63.5
+offset_right = -1116.0
+offset_bottom = -551.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+alignment = 1

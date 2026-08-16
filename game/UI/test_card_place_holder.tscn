@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bievw1si2sopf"]
+
+[ext_resource type="Script" uid="uid://cgt2g7sja7bjl" path="res://UI/test_card_place_holder.gd" id="1_p52km"]
+
+[node name="CardPlaceHolder" type="ColorRect" unique_id=1167662447]
+custom_minimum_size = Vector2(120, 160)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_p52km")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1096610694]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer" unique_id=1720813891]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+color = Color(0.014579743, 0, 0.4286845, 1)
+
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=1344016561]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer" unique_id=906714406]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.34027264, 0.89426845, 0.63399947, 1)
