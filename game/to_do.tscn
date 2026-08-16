@@ -99,3 +99,14 @@ text = "Power system
 - keeps track of avialbe power
 - resets aviable power at start of turn
 - has interface for components and actions"
+
+[node name="Shifting camera angle" type="Label" parent="." unique_id=119434713]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 435.0
+offset_right = 422.0
+offset_bottom = 536.0
+text = "Shifting camera angle (optional)
+- place cards on bottom and ships to the left and right
+- when player ends turn shift to side view to better
+see the fireing of guns"

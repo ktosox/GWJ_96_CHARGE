@@ -2,30 +2,44 @@
 
 [ext_resource type="Script" uid="uid://cgt2g7sja7bjl" path="res://UI/test_card_place_holder.gd" id="1_p52km"]
 
-[node name="CardPlaceHolder" type="ColorRect" unique_id=1167662447]
+[node name="CardPlaceHolder" type="CenterContainer" unique_id=224069834]
 custom_minimum_size = Vector2(120, 160)
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 120.0
+offset_bottom = 160.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
 script = ExtResource("1_p52km")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1096610694]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=267022807]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1096610694]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer" unique_id=1720813891]
+[node name="ColorRect" type="ColorRect" parent="ColorRect/VBoxContainer" unique_id=1720813891]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
+mouse_filter = 2
 color = Color(0.014579743, 0, 0.4286845, 1)
 
-[node name="Control" type="Control" parent="VBoxContainer" unique_id=1344016561]
+[node name="Control" type="Control" parent="ColorRect/VBoxContainer" unique_id=1344016561]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+mouse_filter = 2
 
-[node name="ColorRect2" type="ColorRect" parent="VBoxContainer" unique_id=906714406]
+[node name="ColorRect2" type="ColorRect" parent="ColorRect/VBoxContainer" unique_id=906714406]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 color = Color(0.34027264, 0.89426845, 0.63399947, 1)
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
