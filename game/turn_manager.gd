@@ -1,6 +1,8 @@
 extends Node
 
-signal phase_changed(new_phase : Phases)
+signal phase_changed
+
+signal turn_changed
 
 #Turn mananger
 #- keeps track of whos turn is it now
@@ -20,17 +22,22 @@ func start_match() -> void :
 	assert(is_there_an_active_match == false)
 	is_there_an_active_match = true
 	is_player_turn = true
+	turn_changed.emit()
 	current_phase = Phases.BEGIN
-	emit_signal("phase_changed",current_phase)
+	phase_changed.emit()
 	pass
 
 
-func progress_turn() -> void:
+func progress_turn(old_phase : Phases) -> void: # takes old_phase as input to make sure the caller is not trying to progress phase out of order
 	assert(is_there_an_active_match == true)
+	assert(old_phase == current_phase)
 	if current_phase == Phases.FINISH:
 		is_player_turn = !is_player_turn
+		turn_changed.emit()
 		current_phase = Phases.BEGIN
-	emit_signal("phase_changed",current_phase)
+	else:
+		current_phase += 1
+	phase_changed.emit()
 
 func end_match():
 	assert(is_there_an_active_match == true)

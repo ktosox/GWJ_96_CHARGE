@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://d0u44i8613ant"]
+
+[ext_resource type="Script" uid="uid://c2t4oc2f58coo" path="res://test/test_turn_phases.gd" id="1_3jx6g"]
+
+[node name="TestTurnPhases" type="Control" unique_id=1840072691]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3jx6g")
+
+[node name="WhosTurn" type="Label" parent="." unique_id=1410815426]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 67.0
+offset_right = 201.0
+offset_bottom = 107.0
+
+[node name="CurrentPhase" type="Label" parent="." unique_id=1134995627]
+layout_mode = 0
+offset_left = 627.0
+offset_top = 70.0
+offset_right = 696.0
+offset_bottom = 110.0
+
+[node name="start match" type="Button" parent="." unique_id=1759965979]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 373.0
+offset_right = 338.0
+offset_bottom = 404.0
+text = "start match"
+
+[node name="next phase" type="Button" parent="." unique_id=356640716]
+layout_mode = 0
+offset_left = 728.0
+offset_top = 372.0
+offset_right = 822.0
+offset_bottom = 403.0
+text = "next phase"
+
+[connection signal="pressed" from="start match" to="." method="_on_start_match_pressed"]
+[connection signal="pressed" from="next phase" to="." method="_on_next_phase_pressed"]
