@@ -10,13 +10,13 @@ grow_vertical = 2
 
 [node name="TurnManager" type="Label" parent="." unique_id=1088167868]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 52.0
-offset_right = 412.0
-offset_bottom = 153.0
+offset_left = 11.0
+offset_top = 36.0
+offset_right = 411.0
+offset_bottom = 137.0
 text = "Turn mananger
-- keeps track of whos turn is it now
-- emits signals whenever a specifc phase is reached
+x keeps track of whos turn is it now
+x emits signals whenever a specifc phase is reached
 - needs to know when to move on to the next phase"
 
 [node name="Background" type="Label" parent="." unique_id=1751967185]
@@ -91,10 +91,10 @@ text = "Components
 
 [node name="Power system" type="Label" parent="." unique_id=1293884141]
 layout_mode = 0
-offset_left = 457.0
-offset_top = 37.0
-offset_right = 788.0
-offset_bottom = 138.0
+offset_left = 443.0
+offset_top = 46.0
+offset_right = 774.0
+offset_bottom = 147.0
 text = "Power system
 - keeps track of avialbe power
 - resets aviable power at start of turn

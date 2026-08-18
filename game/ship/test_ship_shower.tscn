@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b0jfvhlj04t3v"]
 
 [ext_resource type="PackedScene" uid="uid://clvgupby0v631" path="res://ship/ship_segment.tscn" id="1_2xc6m"]
+[ext_resource type="PackedScene" uid="uid://c06i2b7mb707u" path="res://slots/slot.tscn" id="2_xerxn"]
 
 [sub_resource type="Environment" id="Environment_2xc6m"]
 ambient_light_source = 2
@@ -12,18 +13,6 @@ top_radius = 1.2
 bottom_radius = 1.2
 height = 0.3
 radial_segments = 6
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aobkh"]
-albedo_color = Color(0.84313726, 0.42352942, 0.42352942, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_1qhx3"]
-material = SubResource("StandardMaterial3D_aobkh")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2xc6m"]
-albedo_color = Color(0, 0.6515612, 0.645383, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_xerxn"]
-material = SubResource("StandardMaterial3D_2xc6m")
 
 [node name="TestShipShower" type="Node3D" unique_id=474396500]
 
@@ -38,29 +27,19 @@ environment = SubResource("Environment_2xc6m")
 
 [node name="SegmentsGoHere" type="Node3D" parent="." unique_id=1419794268]
 
-[node name="A" type="Node3D" parent="SegmentsGoHere" unique_id=1345839335]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
-
-[node name="ShipSegment4" parent="SegmentsGoHere/A" unique_id=2065565167 instance=ExtResource("1_2xc6m")]
-
-[node name="B" type="Node3D" parent="SegmentsGoHere" unique_id=1177455117]
+[node name="A" type="Node3D" parent="SegmentsGoHere" unique_id=1177455117]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
 
-[node name="ShipSegment3" parent="SegmentsGoHere/B" unique_id=1008841467 instance=ExtResource("1_2xc6m")]
+[node name="ShipSegment3" parent="SegmentsGoHere/A" unique_id=1008841467 instance=ExtResource("1_2xc6m")]
 
-[node name="C" type="Node3D" parent="SegmentsGoHere" unique_id=740668111]
+[node name="B" type="Node3D" parent="SegmentsGoHere" unique_id=740668111]
 
-[node name="ShipSegment" parent="SegmentsGoHere/C" unique_id=2031359853 instance=ExtResource("1_2xc6m")]
+[node name="ShipSegment" parent="SegmentsGoHere/B" unique_id=2031359853 instance=ExtResource("1_2xc6m")]
 
-[node name="D" type="Node3D" parent="SegmentsGoHere" unique_id=2098936926]
+[node name="C" type="Node3D" parent="SegmentsGoHere" unique_id=2098936926]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
-[node name="ShipSegment2" parent="SegmentsGoHere/D" unique_id=1413397396 instance=ExtResource("1_2xc6m")]
-
-[node name="E" type="Node3D" parent="SegmentsGoHere" unique_id=1613914118]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-
-[node name="ShipSegment3" parent="SegmentsGoHere/E" unique_id=1333717934 instance=ExtResource("1_2xc6m")]
+[node name="ShipSegment2" parent="SegmentsGoHere/C" unique_id=1413397396 instance=ExtResource("1_2xc6m")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SegmentsGoHere" unique_id=487031251]
 transform = Transform3D(-4.371139e-08, 0.40000004, 8.742278e-09, 0, -1.7484556e-08, 0.2, 1, 1.7484556e-08, 3.821371e-16, 0.5, 0, 0)
@@ -86,10 +65,13 @@ light_bake_mode = 1
 omni_range = 8.034
 omni_attenuation = 0.67
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2099609923]
-transform = Transform3D(0.355, 0, 0, 0, 0.355, 0, 0, 0, 0.355, -0.8564838, 0, 0.46709943)
-mesh = SubResource("BoxMesh_1qhx3")
+[node name="Slot" parent="." unique_id=1453325741 instance=ExtResource("2_xerxn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0350407, 0, -0.3011665)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=577719484]
-transform = Transform3D(0.355, 0, 0, 0, 0.355, 0, 0, 0, 0.355, 0.86667997, 0, -0.40571117)
-mesh = SubResource("BoxMesh_xerxn")
+[node name="Slot2" parent="." unique_id=1661151167 instance=ExtResource("2_xerxn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0855538, 0, 0.4003847)
+accepted_component = 2
+
+[node name="Slot3" parent="." unique_id=1206641122 instance=ExtResource("2_xerxn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007460475, 0, 0.4003847)
+accepted_component = 1

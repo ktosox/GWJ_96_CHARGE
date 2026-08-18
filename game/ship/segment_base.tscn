@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c8ocftud2h58v"]
+
+[ext_resource type="Script" uid="uid://be54btukf10t3" path="res://ship/segment_base.gd" id="1_y1lpc"]
+
+[node name="SegmentBase" type="Node3D" unique_id=1078559996]
+script = ExtResource("1_y1lpc")

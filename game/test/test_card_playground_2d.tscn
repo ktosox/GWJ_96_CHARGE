@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cgkcgr1ylnyga"]
+
+[ext_resource type="Texture2D" uid="uid://veol2y8iixbv" path="res://icon.png" id="1_nvibn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvibn"]
+size = Vector2(123, 263)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_aobkh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1qhx3"]
+
+[node name="TestCardPlayground2D" type="Node2D" unique_id=1791500429]
+
+[node name="PinJoint2D" type="DampedSpringJoint2D" parent="." unique_id=1383925832]
+position = Vector2(650, 604)
+node_a = NodePath("../RigidBody2D")
+node_b = NodePath("../HandAnchor")
+bias = 0.48
+length = 3844.0
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1250561979]
+position = Vector2(830, 381)
+lock_rotation = true
+
+[node name="Icon" type="Sprite2D" parent="RigidBody2D" unique_id=2135470088]
+scale = Vector2(1, 2.105)
+texture = ExtResource("1_nvibn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1374717332]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_nvibn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1436152101]
+position = Vector2(541, 836)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=813975073]
+position = Vector2(107, -100)
+shape = SubResource("WorldBoundaryShape2D_aobkh")
+
+[node name="HandAnchor" type="StaticBody2D" parent="." unique_id=527051615]
+position = Vector2(650, 604)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HandAnchor" unique_id=417218637]
+shape = SubResource("CircleShape2D_1qhx3")

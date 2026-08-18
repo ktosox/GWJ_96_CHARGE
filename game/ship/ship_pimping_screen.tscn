@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://duekx21053b43"]
 
 [ext_resource type="Script" uid="uid://05bigsvqyrg1" path="res://ship/ship_pimping_screen.gd" id="1_vougy"]
+[ext_resource type="PackedScene" uid="uid://b0jfvhlj04t3v" path="res://ship/test_ship_shower.tscn" id="2_qmpgl"]
 
 [node name="ShipPimpingScreen" type="Control" unique_id=43276957]
 layout_mode = 3
@@ -10,3 +11,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vougy")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=6772937]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 362.0
+offset_right = 1035.0
+offset_bottom = 702.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=200379403]
+size = Vector2i(588, 340)
+
+[node name="TestShipShower" parent="SubViewportContainer/SubViewport" unique_id=474396500 instance=ExtResource("2_qmpgl")]

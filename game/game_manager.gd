@@ -1,5 +1,8 @@
 extends Node
 
+# needs to store data that persists between matches
+
+enum ComponentType {ATTACK, DEFENCE, POWER, HEALTH}
 
 @export var player_ship_data : ShipData
 
