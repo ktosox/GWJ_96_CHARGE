@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cbbmxnsqvtpx1"]
+
+[ext_resource type="Script" uid="uid://d3y57b2eshpsm" path="res://test/test_card_2d.gd" id="1_2cr8h"]
+[ext_resource type="Texture2D" uid="uid://veol2y8iixbv" path="res://icon.png" id="1_hoc7e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvibn"]
+size = Vector2(123, 263)
+
+[sub_resource type="Animation" id="Animation_2cr8h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o5oik"]
+resource_name = "de-select"
+length = 0.5
+capture_included = true
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(2),
+"update": 2,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wnbcp"]
+resource_name = "select"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, -2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0.3019608, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o5oik"]
+_data = {
+&"RESET": SubResource("Animation_2cr8h"),
+&"de-select": SubResource("Animation_o5oik"),
+&"select": SubResource("Animation_wnbcp")
+}
+
+[node name="TestCard2D" type="RigidBody2D" unique_id=1445291734]
+input_pickable = true
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp = 10.0
+script = ExtResource("1_2cr8h")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=657478711]
+scale = Vector2(1, 2.105)
+texture = ExtResource("1_hoc7e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=634947617]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_nvibn")
+
+[node name="CardAnimator" type="AnimationPlayer" parent="." unique_id=1541989886]
+libraries/ = SubResource("AnimationLibrary_o5oik")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

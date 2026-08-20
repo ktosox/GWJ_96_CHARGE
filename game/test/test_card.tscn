@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://dg7b87x0hwbum"]
+
+[ext_resource type="Script" uid="uid://jwl6y0uya31p" path="res://test/test_card.gd" id="1_kjpy2"]
+
+[sub_resource type="Animation" id="Animation_kjpy2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_awojq"]
+resource_name = "de-select"
+length = 0.5
+capture_included = true
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 2,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ttjuv"]
+resource_name = "select"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53333336, 1),
+"transitions": PackedFloat32Array(1, -2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.83137256, 0.83137256, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fsfas"]
+_data = {
+&"RESET": SubResource("Animation_kjpy2"),
+&"de-select": SubResource("Animation_awojq"),
+&"select": SubResource("Animation_ttjuv")
+}
+
+[node name="TestCard" type="CenterContainer" unique_id=1258614143 groups=["Card"]]
+custom_minimum_size = Vector2(139, 225)
+custom_maximum_size = Vector2(139, 225)
+propagate_maximum_size = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1141.0
+offset_bottom = -495.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kjpy2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=915145808]
+custom_minimum_size = Vector2(200, 280)
+layout_mode = 2
+mouse_filter = 2
+color = Color(1, 0.41568628, 1, 1)
+
+[node name="CardAnimator" type="AnimationPlayer" parent="." unique_id=1985980332]
+libraries/ = SubResource("AnimationLibrary_fsfas")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
