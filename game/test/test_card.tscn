@@ -23,6 +23,30 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:offset_transform_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:offset_transform_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_awojq"]
 resource_name = "de-select"
@@ -40,10 +64,35 @@ tracks/0/keys = {
 "update": 2,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:offset_transform_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(0.5),
+"update": 2,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:offset_transform_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 2,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_ttjuv"]
 resource_name = "select"
 loop_mode = 1
+capture_included = true
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -56,6 +105,30 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(0.83137256, 0.83137256, 0, 1), Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:offset_transform_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 2,
+"values": [Vector2(2.4, 2.4)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:offset_transform_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(2),
+"update": 2,
+"values": [Vector2(0, -60)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fsfas"]
 _data = {
@@ -65,14 +138,14 @@ _data = {
 }
 
 [node name="TestCard" type="CenterContainer" unique_id=1258614143 node_paths=PackedStringArray("name_label") groups=["Card"]]
-custom_minimum_size = Vector2(139, 225)
-custom_maximum_size = Vector2(139, 225)
+custom_minimum_size = Vector2(81, 131)
+custom_maximum_size = Vector2(81, 131)
 propagate_maximum_size = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1141.0
-offset_bottom = -495.0
+offset_right = -1199.0
+offset_bottom = -589.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kjpy2")
@@ -80,8 +153,9 @@ name_label = NodePath("Name")
 card_data = SubResource("Resource_kjpy2")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=915145808]
-custom_minimum_size = Vector2(200, 280)
+custom_minimum_size = Vector2(81, 131)
 layout_mode = 2
+offset_transform_enabled = true
 mouse_filter = 2
 color = Color(1, 0.41568628, 1, 1)
 

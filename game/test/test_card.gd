@@ -17,6 +17,7 @@ func _ready() -> void:
 	card_data.linked_physical_card = self
 
 	call_deferred("un_grab")
+
 	pass # Replace with function body.
 
 

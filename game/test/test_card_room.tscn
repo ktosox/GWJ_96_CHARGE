@@ -30,20 +30,30 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mddd0")
 
-[node name="TestCardEater" parent="." unique_id=2111001103 instance=ExtResource("3_xrwng")]
+[node name="ActionCardEater" parent="." unique_id=2111001103 instance=ExtResource("3_xrwng")]
 layout_mode = 1
 offset_left = 290.0
 offset_top = 16.0
-offset_right = -587.0
-offset_bottom = -505.0
+offset_right = -418.0
+offset_bottom = -453.0
+
+[node name="ComponentCardEater" parent="." unique_id=1197486210 instance=ExtResource("3_xrwng")]
+layout_mode = 1
+offset_left = 524.0
+offset_top = 93.0
+offset_right = -617.0
+offset_bottom = -493.0
 accepted_card_list = Array[int]([1])
+
+[node name="Preview" parent="ComponentCardEater" index="0" unique_id=1524289309]
+color = Color(0.41906554, 0.43844038, 0.81635803, 0.46666667)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=394710017]
 layout_mode = 0
-offset_left = 161.0
-offset_top = 388.0
-offset_right = 1244.0
-offset_bottom = 498.0
+offset_left = 202.0
+offset_top = 561.0
+offset_right = 650.0
+offset_bottom = 671.0
 alignment = 1
 
 [node name="RestingAnchor1" type="Control" parent="HBoxContainer" unique_id=1156133447]
@@ -84,3 +94,5 @@ offset_right = -366.0
 offset_bottom = -194.0
 resting_anchor = NodePath("../HBoxContainer/RestingAnchor3")
 card_data = SubResource("Resource_igk8f")
+
+[editable path="ComponentCardEater"]
