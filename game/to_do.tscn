@@ -35,9 +35,9 @@ offset_top = 242.0
 offset_right = 343.0
 offset_bottom = 395.0
 text = "Cards
-- card drawing
+- card drawing (includes arraging in hand)
 - deck tracking
-- holding cards in hand
++ holding cards in hand
 - using cards
 - translating cards to effects / components"
 

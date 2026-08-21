@@ -38,26 +38,49 @@ offset_right = -587.0
 offset_bottom = -505.0
 accepted_card_list = Array[int]([1])
 
-[node name="TestCard" parent="." unique_id=1258614143 instance=ExtResource("2_yoma7")]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=394710017]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 388.0
+offset_right = 1244.0
+offset_bottom = 498.0
+alignment = 1
+
+[node name="RestingAnchor1" type="Control" parent="HBoxContainer" unique_id=1156133447]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RestingAnchor2" type="Control" parent="HBoxContainer" unique_id=1181491275]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RestingAnchor3" type="Control" parent="HBoxContainer" unique_id=1648266944]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TestCard1" parent="." unique_id=1258614143 node_paths=PackedStringArray("resting_anchor") instance=ExtResource("2_yoma7")]
 layout_mode = 1
 offset_left = 251.0
 offset_top = 301.0
 offset_right = -890.0
 offset_bottom = -194.0
+resting_anchor = NodePath("../HBoxContainer/RestingAnchor1")
 card_data = SubResource("Resource_06427")
 
-[node name="TestCard2" parent="." unique_id=2146666496 instance=ExtResource("2_yoma7")]
+[node name="TestCard2" parent="." unique_id=2146666496 node_paths=PackedStringArray("resting_anchor") instance=ExtResource("2_yoma7")]
 layout_mode = 1
 offset_left = 521.0
 offset_top = 304.0
 offset_right = -620.0
 offset_bottom = -191.0
+resting_anchor = NodePath("../HBoxContainer/RestingAnchor2")
 card_data = SubResource("Resource_phhlj")
 
-[node name="TestCard3" parent="." unique_id=983826970 instance=ExtResource("2_yoma7")]
+[node name="TestCard3" parent="." unique_id=983826970 node_paths=PackedStringArray("resting_anchor") instance=ExtResource("2_yoma7")]
 layout_mode = 1
 offset_left = 775.0
 offset_top = 301.0
 offset_right = -366.0
 offset_bottom = -194.0
+resting_anchor = NodePath("../HBoxContainer/RestingAnchor3")
 card_data = SubResource("Resource_igk8f")

@@ -15,6 +15,8 @@ var mouse_offset : Vector2
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	card_data.linked_physical_card = self
+
+	call_deferred("un_grab")
 	pass # Replace with function body.
 
 
@@ -75,6 +77,8 @@ func grab():
 func un_grab():
 	visible = true
 	grabbed = false
+	if is_instance_valid(resting_anchor):
+		global_position = resting_anchor.global_position
 	pass
 
 
