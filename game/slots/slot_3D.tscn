@@ -8,6 +8,10 @@ size = Vector3(0.3, 0.2, 0.3)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rdrxn"]
 resource_local_to_scene = true
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_25o6c"]
+radius = 0.113
+height = 0.969
+
 [node name="Slot3D" type="Node3D" unique_id=1453325741 node_paths=PackedStringArray("indicator")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 script = ExtResource("1_3uwmw")
@@ -22,3 +26,7 @@ indicator = NodePath("Indicator")
 [node name="Indicator" type="MeshInstance3D" parent="." unique_id=1245526880]
 mesh = SubResource("BoxMesh_1qhx3")
 surface_material_override/0 = SubResource("StandardMaterial3D_rdrxn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=650334330]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6277369, -2.7439253e-08)
+mesh = SubResource("CapsuleMesh_25o6c")
