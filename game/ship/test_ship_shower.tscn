@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0jfvhlj04t3v"]
 
 [ext_resource type="PackedScene" uid="uid://clvgupby0v631" path="res://ship/ship_segment.tscn" id="1_2xc6m"]
-[ext_resource type="PackedScene" uid="uid://c06i2b7mb707u" path="res://slots/slot.tscn" id="2_xerxn"]
+[ext_resource type="PackedScene" uid="uid://c06i2b7mb707u" path="res://slots/slot_3D.tscn" id="2_xerxn"]
 
 [sub_resource type="Environment" id="Environment_2xc6m"]
 ambient_light_source = 2

@@ -8,7 +8,7 @@ size = Vector2(1.4, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_us223"]
 size = Vector2(0.5, 1)
 
-[node name="ShipSegment" type="Node3D" unique_id=2065565167]
+[node name="ShipSegment3D" type="Node3D" unique_id=2065565167]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, 0)
 script = ExtResource("1_ln070")
 

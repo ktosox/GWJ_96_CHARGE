@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cnvnfvife72pn"]
+
+[ext_resource type="Script" uid="uid://5rrjp1myb1vb" path="res://test/test_camera_tilt.gd" id="1_x6qvf"]
+[ext_resource type="PackedScene" uid="uid://c230fthvux4v7" path="res://slots/slot.tscn" id="2_yfw87"]
+
+[node name="TestCameraTilt" type="Control" unique_id=334259109]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x6qvf")
+
+[node name="Slot" parent="." unique_id=1698210535 instance=ExtResource("2_yfw87")]
+layout_mode = 1
+offset_left = 423.0
+offset_top = 217.0
+offset_right = -520.0
+offset_bottom = -259.0
+
+[editable path="Slot"]
+[editable path="Slot/SubViewportContainer/SubViewport/DefaultCameraSetup"]

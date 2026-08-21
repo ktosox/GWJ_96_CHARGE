@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c17qdipny8yo6"]
+
+[ext_resource type="Script" uid="uid://dbcvk2c2up16v" path="res://default_camera_setup.gd" id="1_vl1uv"]
+
+[sub_resource type="Environment" id="Environment_1mq0t"]
+ambient_light_source = 2
+ambient_light_color = Color(0.14967284, 0.11494597, 0.58036315, 1)
+ambient_light_energy = 0.4
+
+[node name="DefaultCameraSetup" type="Node3D" unique_id=473069379]
+script = ExtResource("1_vl1uv")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1567322194]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+current = true
+fov = 60.0
+size = 1.965
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Camera3D" unique_id=650076988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.4212446)
+light_color = Color(0.96739084, 0.6503807, 0.5669244, 1)
+light_energy = 0.93
+light_bake_mode = 1
+omni_range = 8.034
+omni_attenuation = 0.67
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=589205454]
+environment = SubResource("Environment_1mq0t")
