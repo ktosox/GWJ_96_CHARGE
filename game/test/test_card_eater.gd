@@ -3,9 +3,9 @@ extends Control
 @export var accepted_card_list : Array[GameManager.CardType] = []
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
-	
-	
-	return true
+	var card_data = data as CardData
+	return accepted_card_list.has(card_data.type)
+
 
 
 func _drop_data(at_position: Vector2, data: Variant) -> void:

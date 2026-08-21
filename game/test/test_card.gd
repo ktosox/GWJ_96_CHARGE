@@ -63,8 +63,9 @@ func grab():
 	announce_grab()
 	mouse_offset = get_local_mouse_position()
 
-	var test_preview = ColorRect.new()
-	test_preview.size = Vector2(20,20)
+	var test_preview = CenterContainer.new()
+	test_preview.use_top_left = true
+	test_preview.add_child($ColorRect.duplicate())
 	call_deferred("force_drag",card_data,test_preview)
 	visible = false
 	pass

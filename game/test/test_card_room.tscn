@@ -3,6 +3,23 @@
 [ext_resource type="Script" uid="uid://d0fhvv4rte8fq" path="res://test/test_card_room.gd" id="1_mddd0"]
 [ext_resource type="PackedScene" uid="uid://dg7b87x0hwbum" path="res://test/test_card.tscn" id="2_yoma7"]
 [ext_resource type="PackedScene" uid="uid://cuy2ed467sapd" path="res://test/test_card_eater.tscn" id="3_xrwng"]
+[ext_resource type="Script" uid="uid://bumkj2560ahrl" path="res://card_data.gd" id="4_06427"]
+
+[sub_resource type="Resource" id="Resource_06427"]
+resource_local_to_scene = true
+script = ExtResource("4_06427")
+type = 1
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_phhlj"]
+resource_local_to_scene = true
+script = ExtResource("4_06427")
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_igk8f"]
+resource_local_to_scene = true
+script = ExtResource("4_06427")
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
 
 [node name="TestCardRoom" type="Control" unique_id=681516168]
 layout_mode = 3
@@ -19,6 +36,7 @@ offset_left = 290.0
 offset_top = 16.0
 offset_right = -587.0
 offset_bottom = -505.0
+accepted_card_list = Array[int]([1])
 
 [node name="TestCard" parent="." unique_id=1258614143 instance=ExtResource("2_yoma7")]
 layout_mode = 1
@@ -26,6 +44,7 @@ offset_left = 251.0
 offset_top = 301.0
 offset_right = -890.0
 offset_bottom = -194.0
+card_data = SubResource("Resource_06427")
 
 [node name="TestCard2" parent="." unique_id=2146666496 instance=ExtResource("2_yoma7")]
 layout_mode = 1
@@ -33,6 +52,7 @@ offset_left = 521.0
 offset_top = 304.0
 offset_right = -620.0
 offset_bottom = -191.0
+card_data = SubResource("Resource_phhlj")
 
 [node name="TestCard3" parent="." unique_id=983826970 instance=ExtResource("2_yoma7")]
 layout_mode = 1
@@ -40,3 +60,4 @@ offset_left = 775.0
 offset_top = 301.0
 offset_right = -366.0
 offset_bottom = -194.0
+card_data = SubResource("Resource_igk8f")
