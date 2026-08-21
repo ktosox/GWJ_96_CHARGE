@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://dg7b87x0hwbum"]
 
 [ext_resource type="Script" uid="uid://jwl6y0uya31p" path="res://test/test_card.gd" id="1_kjpy2"]
+[ext_resource type="Script" uid="uid://bumkj2560ahrl" path="res://card_data.gd" id="2_awojq"]
+
+[sub_resource type="Resource" id="Resource_kjpy2"]
+resource_local_to_scene = true
+script = ExtResource("2_awojq")
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
 
 [sub_resource type="Animation" id="Animation_kjpy2"]
 length = 0.001
@@ -57,7 +63,7 @@ _data = {
 &"select": SubResource("Animation_ttjuv")
 }
 
-[node name="TestCard" type="CenterContainer" unique_id=1258614143 groups=["Card"]]
+[node name="TestCard" type="CenterContainer" unique_id=1258614143 node_paths=PackedStringArray("name_label") groups=["Card"]]
 custom_minimum_size = Vector2(139, 225)
 custom_maximum_size = Vector2(139, 225)
 propagate_maximum_size = false
@@ -69,6 +75,8 @@ offset_bottom = -495.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kjpy2")
+name_label = NodePath("Name")
+card_data = SubResource("Resource_kjpy2")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=915145808]
 custom_minimum_size = Vector2(200, 280)
@@ -78,6 +86,9 @@ color = Color(1, 0.41568628, 1, 1)
 
 [node name="CardAnimator" type="AnimationPlayer" parent="." unique_id=1985980332]
 libraries/ = SubResource("AnimationLibrary_fsfas")
+
+[node name="Name" type="Label" parent="." unique_id=905542530]
+layout_mode = 2
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

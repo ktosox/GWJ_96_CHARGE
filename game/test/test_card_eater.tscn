@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cuy2ed467sapd"]
+
+[ext_resource type="Script" uid="uid://cnv7ur1defbjt" path="res://test/test_card_eater.gd" id="1_kvij0"]
+
+[node name="TestCardEater" type="Control" unique_id=2111001103]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -877.0
+offset_bottom = -521.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kvij0")
+accepted_card_list = Array[int]([0])
+
+[node name="Preview" type="ColorRect" parent="." unique_id=1524289309]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0.87058824, 0.101960786, 0.4117647, 0.46666667)

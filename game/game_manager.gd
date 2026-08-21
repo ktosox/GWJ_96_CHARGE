@@ -4,13 +4,17 @@ extends Node
 
 enum ComponentType {ATTACK, DEFENCE, POWER, HEALTH}
 
+enum CardType {ACTION, COMPONENT}
+
 @export var player_ship_data : ShipData
 
 @export var enemy_ship_data : ShipData
 
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+
 	pass # Replace with function body.
 
 

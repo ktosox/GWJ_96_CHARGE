@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0fhvv4rte8fq" path="res://test/test_card_room.gd" id="1_mddd0"]
 [ext_resource type="PackedScene" uid="uid://dg7b87x0hwbum" path="res://test/test_card.tscn" id="2_yoma7"]
+[ext_resource type="PackedScene" uid="uid://cuy2ed467sapd" path="res://test/test_card_eater.tscn" id="3_xrwng"]
 
 [node name="TestCardRoom" type="Control" unique_id=681516168]
 layout_mode = 3
@@ -11,6 +12,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mddd0")
+
+[node name="TestCardEater" parent="." unique_id=2111001103 instance=ExtResource("3_xrwng")]
+layout_mode = 1
+offset_left = 290.0
+offset_top = 16.0
+offset_right = -587.0
+offset_bottom = -505.0
 
 [node name="TestCard" parent="." unique_id=1258614143 instance=ExtResource("2_yoma7")]
 layout_mode = 1
