@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://jwl6y0uya31p" path="res://test/test_card.gd" id="1_kjpy2"]
 [ext_resource type="Script" uid="uid://bumkj2560ahrl" path="res://card_data.gd" id="2_awojq"]
+[ext_resource type="Theme" uid="uid://vxh5scpirmqu" path="res://cards/card_theme.tres" id="3_fsfas"]
+[ext_resource type="Texture2D" uid="uid://veol2y8iixbv" path="res://icon.png" id="3_ttjuv"]
 
 [sub_resource type="Resource" id="Resource_kjpy2"]
 resource_local_to_scene = true
@@ -127,7 +129,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0.3),
 "transitions": PackedFloat32Array(2),
 "update": 2,
-"values": [Vector2(0, -60)]
+"values": [Vector2(0, -70)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fsfas"]
@@ -137,7 +139,7 @@ _data = {
 &"select": SubResource("Animation_ttjuv")
 }
 
-[node name="TestCard" type="CenterContainer" unique_id=1258614143 node_paths=PackedStringArray("name_label") groups=["Card"]]
+[node name="TestCard" type="CenterContainer" unique_id=1258614143 node_paths=PackedStringArray("name_label", "cost_label") groups=["Card"]]
 custom_minimum_size = Vector2(81, 131)
 custom_maximum_size = Vector2(81, 131)
 propagate_maximum_size = false
@@ -149,21 +151,53 @@ offset_bottom = -589.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kjpy2")
-name_label = NodePath("Name")
+name_label = NodePath("ColorRect/HFlowContainer/Name")
+cost_label = NodePath("ColorRect/HFlowContainer/Cost")
 card_data = SubResource("Resource_kjpy2")
+metadata/_edit_horizontal_guides_ = [12.0]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=915145808]
 custom_minimum_size = Vector2(81, 131)
 layout_mode = 2
 offset_transform_enabled = true
 mouse_filter = 2
+theme = ExtResource("3_fsfas")
 color = Color(1, 0.41568628, 1, 1)
+
+[node name="HFlowContainer" type="VBoxContainer" parent="ColorRect" unique_id=1816111754]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Name" type="Label" parent="ColorRect/HFlowContainer" unique_id=905542530]
+layout_mode = 2
+text = "hebue bue bue"
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/HFlowContainer" unique_id=1696286994]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("3_ttjuv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Description" type="Label" parent="ColorRect/HFlowContainer" unique_id=1964400584]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.18651977, 0.18621671, 0.08638296, 1)
+theme_override_font_sizes/font_size = 8
+text = "he bue bue bue bue bue f f adsfafd  fasdfasdfa  fdasfadf f adfa sdf adsf afd "
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Cost" type="Label" parent="ColorRect/HFlowContainer" unique_id=1705904878]
+layout_mode = 2
+text = "8"
+horizontal_alignment = 2
 
 [node name="CardAnimator" type="AnimationPlayer" parent="." unique_id=1985980332]
 libraries/ = SubResource("AnimationLibrary_fsfas")
-
-[node name="Name" type="Label" parent="." unique_id=905542530]
-layout_mode = 2
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

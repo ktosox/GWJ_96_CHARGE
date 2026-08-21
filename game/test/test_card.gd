@@ -10,12 +10,16 @@ var mouse_offset : Vector2
 
 @export var name_label : Label
 
+@export var cost_label : Label
+
 @export var card_data : CardData
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	assert(name_label != null)
 	card_data.linked_physical_card = self
-
+	name_label.text = card_data.name
+	cost_label.text = str(card_data.energy_cost)
 	call_deferred("un_grab")
 
 	pass # Replace with function body.
