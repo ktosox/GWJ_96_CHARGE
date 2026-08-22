@@ -139,7 +139,7 @@ _data = {
 &"select": SubResource("Animation_ttjuv")
 }
 
-[node name="TestCard" type="CenterContainer" unique_id=1258614143 node_paths=PackedStringArray("name_label", "cost_label") groups=["Card"]]
+[node name="TestCard" type="CenterContainer" unique_id=1258614143 node_paths=PackedStringArray("name_label", "cost_label") groups=["card_in_hand"]]
 custom_minimum_size = Vector2(81, 131)
 custom_maximum_size = Vector2(81, 131)
 propagate_maximum_size = false

@@ -89,3 +89,23 @@ func action_turn(current_stats : ShipStats):
 func end_match():
 	assert(is_there_an_active_match == true)
 	is_there_an_active_match = false
+
+
+func check_power(amount : int) -> bool :
+	var active_stats : ShipStats
+	if is_player_turn:
+		active_stats = player_stats
+	else:
+		active_stats = enemy_stats
+	if active_stats.power_current - amount < 0:
+		return false
+	return true
+
+func use_power(amount : int) -> void :
+	var active_stats : ShipStats
+	if is_player_turn:
+		active_stats = player_stats
+	else:
+		active_stats = enemy_stats
+	active_stats.power_current -= amount
+	assert(active_stats.power_current > -1)

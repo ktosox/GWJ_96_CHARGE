@@ -45,7 +45,7 @@ func announce_grab():
 	pass
 
 func announce_select():
-	var all_other_cards = get_tree().get_nodes_in_group("Card")
+	var all_other_cards = get_tree().get_nodes_in_group("card_in_hand")
 	all_other_cards.erase(self)
 	
 	for card in all_other_cards:

@@ -25,6 +25,12 @@ TurnManager="*uid://cf0cdiytsuau8"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 
+[global_group]
+
+card_in_hand=""
+SOT_listener=""
+EOT_listener=""
+
 [input]
 
 LMB={

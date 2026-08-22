@@ -7,7 +7,8 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	TurnManager.connect("turn_changed",announce_turn_change)
-	TurnManager.start_match()
+	GameManager.connect("error_thrown",announce_error)
+	#TurnManager.start_match()
 	pass # Replace with function body.
 
 
@@ -18,4 +19,7 @@ func announce_turn_change():
 		$TurnAnimator.play("enemy_turn")
 	pass
 
-func 
+func announce_error(error_text : String):
+	$ErrorNotification.text = error_text
+	$ErrorAnimator.play("show")
+	pass
