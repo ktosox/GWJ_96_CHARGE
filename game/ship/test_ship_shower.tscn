@@ -1,77 +1,21 @@
 [gd_scene format=3 uid="uid://b0jfvhlj04t3v"]
 
-[ext_resource type="PackedScene" uid="uid://clvgupby0v631" path="res://ship/ship_segment.tscn" id="1_2xc6m"]
-[ext_resource type="PackedScene" uid="uid://c06i2b7mb707u" path="res://slots/slot_3D.tscn" id="2_xerxn"]
-
-[sub_resource type="Environment" id="Environment_2xc6m"]
-ambient_light_source = 2
-ambient_light_color = Color(0.14967284, 0.11494597, 0.58036315, 1)
-ambient_light_energy = 0.4
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_1qhx3"]
-top_radius = 1.2
-bottom_radius = 1.2
-height = 0.3
-radial_segments = 6
+[ext_resource type="PackedScene" uid="uid://c17qdipny8yo6" path="res://default_camera_setup.tscn" id="1_2xc6m"]
+[ext_resource type="PackedScene" uid="uid://bvknlxt4yo056" path="res://ship/segment_base_middle.tscn" id="2_akbds"]
+[ext_resource type="PackedScene" uid="uid://bsqsnfvdqnhv5" path="res://ship/segment_base_front.tscn" id="2_xerxn"]
+[ext_resource type="PackedScene" uid="uid://duvhlrcwr3sqf" path="res://ship/segment_base_engine.tscn" id="4_jw2yr"]
 
 [node name="TestShipShower" type="Node3D" unique_id=474396500]
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=921163301]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 3.071, 0)
-current = true
-fov = 59.3
-size = 1.965
+[node name="DefaultCameraSetup" parent="." unique_id=473069379 instance=ExtResource("1_2xc6m")]
+camera_tilt_vector = Vector2(0, 0.735)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=4327451]
-environment = SubResource("Environment_2xc6m")
+[node name="SegmentBase" parent="DefaultCameraSetup" unique_id=28969615 instance=ExtResource("2_xerxn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0295935, 0, 0)
 
-[node name="SegmentsGoHere" type="Node3D" parent="." unique_id=1419794268]
+[node name="SegmentBase2" parent="DefaultCameraSetup" unique_id=1078559996 instance=ExtResource("2_akbds")]
 
-[node name="A" type="Node3D" parent="SegmentsGoHere" unique_id=1177455117]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+[node name="SegmentBase3" parent="DefaultCameraSetup" unique_id=959628901 instance=ExtResource("4_jw2yr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9363346, 0, 0)
 
-[node name="ShipSegment3" parent="SegmentsGoHere/A" unique_id=1008841467 instance=ExtResource("1_2xc6m")]
-
-[node name="B" type="Node3D" parent="SegmentsGoHere" unique_id=740668111]
-
-[node name="ShipSegment" parent="SegmentsGoHere/B" unique_id=2031359853 instance=ExtResource("1_2xc6m")]
-
-[node name="C" type="Node3D" parent="SegmentsGoHere" unique_id=2098936926]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-
-[node name="ShipSegment2" parent="SegmentsGoHere/C" unique_id=1413397396 instance=ExtResource("1_2xc6m")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="SegmentsGoHere" unique_id=487031251]
-transform = Transform3D(-4.371139e-08, 0.40000004, 8.742278e-09, 0, -1.7484556e-08, 0.2, 1, 1.7484556e-08, 3.821371e-16, 0.5, 0, 0)
-mesh = SubResource("CylinderMesh_1qhx3")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="SegmentsGoHere" unique_id=1016722079]
-transform = Transform3D(-4.371139e-08, 0.40000004, 8.742278e-09, 0, -1.7484556e-08, 0.2, 1, 1.7484556e-08, 3.821371e-16, 1.5, 0, 0)
-mesh = SubResource("CylinderMesh_1qhx3")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="SegmentsGoHere" unique_id=1732082283]
-transform = Transform3D(-4.371139e-08, 0.40000004, 8.742278e-09, 0, -1.7484556e-08, 0.2, 1, 1.7484556e-08, 3.821371e-16, -0.5, 0, 0)
-mesh = SubResource("CylinderMesh_1qhx3")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="SegmentsGoHere" unique_id=1021367747]
-transform = Transform3D(-4.371139e-08, 0.40000004, 8.742278e-09, 0, -1.7484556e-08, 0.2, 1, 1.7484556e-08, 3.821371e-16, -1.5, 0, 0)
-mesh = SubResource("CylinderMesh_1qhx3")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1630346752]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18743515, 4.6669726, 0)
-light_color = Color(0.96739084, 0.6503807, 0.5669244, 1)
-light_energy = 0.93
-light_bake_mode = 1
-omni_range = 8.034
-omni_attenuation = 0.67
-
-[node name="Slot" parent="." unique_id=1453325741 instance=ExtResource("2_xerxn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0350407, 0, -0.3011665)
-
-[node name="Slot2" parent="." unique_id=1661151167 instance=ExtResource("2_xerxn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0855538, 0, 0.4003847)
-accepted_component = 2
-
-[node name="Slot3" parent="." unique_id=1206641122 instance=ExtResource("2_xerxn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007460475, 0, 0.4003847)
-accepted_component = 1
+[editable path="DefaultCameraSetup"]

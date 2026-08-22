@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://3vmox1uy15j0" path="res://game_manager.gd" id="1_70yv6"]
 [ext_resource type="Script" uid="uid://bpc7pojq2jkg0" path="res://ship_data.gd" id="2_smx3j"]
+[ext_resource type="Script" uid="uid://bcd2ad6g0fhn3" path="res://card_editor.gd" id="4_d5upp"]
+[ext_resource type="PackedScene" uid="uid://4lg3nth7uo4q" path="res://cards/card_editing_thing.tscn" id="5_vk86k"]
 
 [sub_resource type="Resource" id="Resource_70yv6"]
 script = ExtResource("2_smx3j")
@@ -11,3 +13,32 @@ metadata/_custom_type_script = "uid://bpc7pojq2jkg0"
 [node name="GameManager" type="Node" unique_id=1719287768]
 script = ExtResource("1_70yv6")
 player_ship_data = SubResource("Resource_70yv6")
+
+[node name="CardEditor" type="VBoxContainer" parent="." unique_id=1663770218]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_d5upp")
+
+[node name="CardEditingThing" parent="CardEditor" unique_id=1742103350 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+
+[node name="CostField" parent="CardEditor/CardEditingThing" index="1" unique_id=1740874865]
+text = "1"
+
+[node name="CheckButton" parent="CardEditor/CardEditingThing" index="13" unique_id=537236991]
+button_pressed = false
+
+[node name="CardEditingThing2" parent="CardEditor" unique_id=137667816 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+
+[node name="CostField" parent="CardEditor/CardEditingThing2" index="1" unique_id=1740874865]
+text = "2"
+
+[node name="DescField" parent="CardEditor/CardEditingThing2" index="7" unique_id=180599192]
+text = "test test test"
+
+[editable path="CardEditor/CardEditingThing"]
+[editable path="CardEditor/CardEditingThing2"]

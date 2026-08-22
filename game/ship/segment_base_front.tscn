@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bsqsnfvdqnhv5"]
+
+[ext_resource type="PackedScene" uid="uid://c8ocftud2h58v" path="res://ship/segment_base.tscn" id="1_x0vyd"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_aobkh"]
+left_to_right = -0.1
+size = Vector3(0.7, 1, 1)
+
+[node name="SegmentBase" unique_id=1078559996 instance=ExtResource("1_x0vyd")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0" unique_id=746250297]
+transform = Transform3D(-4.371139e-08, -0.99999994, 4.3711385e-08, 0, -4.3711385e-08, -0.99999994, 1, -4.3711385e-08, 1.9106853e-15, 0, 0, 0)
+mesh = SubResource("PrismMesh_aobkh")

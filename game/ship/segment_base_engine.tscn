@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://duvhlrcwr3sqf"]
+
+[ext_resource type="PackedScene" uid="uid://c8ocftud2h58v" path="res://ship/segment_base.tscn" id="1_icp5m"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1qhx3"]
+top_radius = 0.16
+bottom_radius = 0.265
+height = 0.985
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1qhx3"]
+radius = 0.2475586
+height = 1.1655273
+
+[node name="SegmentBase" unique_id=1078559996 instance=ExtResource("1_icp5m")]
+segment_placement = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0" unique_id=2137285762]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0.4, 0)
+mesh = SubResource("CylinderMesh_1qhx3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="1" unique_id=1359475640]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.4, 0)
+mesh = SubResource("CylinderMesh_1qhx3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." index="2" unique_id=707205673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3095319, -0.009521484, 0)
+mesh = SubResource("CapsuleMesh_1qhx3")

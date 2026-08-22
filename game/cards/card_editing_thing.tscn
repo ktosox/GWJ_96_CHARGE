@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://4lg3nth7uo4q"]
+
+[ext_resource type="Texture2D" uid="uid://veol2y8iixbv" path="res://icon.png" id="1_33a7u"]
+[ext_resource type="Script" uid="uid://dj7pq805b74if" path="res://cards/card_editing_thing.gd" id="1_jrgms"]
+[ext_resource type="Script" uid="uid://bumkj2560ahrl" path="res://card_data.gd" id="2_x4cte"]
+
+[sub_resource type="Resource" id="Resource_jrgms"]
+resource_local_to_scene = true
+script = ExtResource("2_x4cte")
+name = "he bue bue bue"
+energy_cost = 2
+illustration = ExtResource("1_33a7u")
+description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[node name="CardEditingThing" type="HBoxContainer" unique_id=1742103350]
+custom_minimum_size = Vector2(0, 42)
+custom_maximum_size = Vector2(-1, 42)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -684.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jrgms")
+card_data = SubResource("Resource_jrgms")
+
+[node name="Label" type="Label" parent="." unique_id=1119086349]
+layout_mode = 2
+text = "cost"
+
+[node name="CostField" type="TextEdit" parent="." unique_id=1740874865]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+text = "0"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1316888309]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="." unique_id=634087574]
+layout_mode = 2
+text = "name"
+
+[node name="NameField" type="TextEdit" parent="." unique_id=714978814]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+text = "he bue bue bue"
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1820342490]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="." unique_id=1401705999]
+layout_mode = 2
+text = "card text"
+
+[node name="DescField" type="TextEdit" parent="." unique_id=180599192]
+custom_minimum_size = Vector2(290, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
+wrap_mode = 1
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=405407685]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="." unique_id=965975607]
+layout_mode = 2
+text = "texture"
+
+[node name="Texture" type="TextureRect" parent="." unique_id=1002329928]
+layout_mode = 2
+texture = ExtResource("1_33a7u")
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=138109111]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="." unique_id=474590324]
+layout_mode = 2
+text = "is action"
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=537236991]
+layout_mode = 2
+button_pressed = true

@@ -1,6 +1,6 @@
 extends Control
 
-var current_ship_data : ShipData
+@export var current_ship_data : ShipData
 
 # needs to fetch current ship set up from a global manager -> GameManager
 # needs to display current ship set up
