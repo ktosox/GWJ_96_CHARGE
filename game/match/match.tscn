@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://b6rdhhqnueyf2"]
+
+[ext_resource type="Script" uid="uid://ia6bxa0vkxkb" path="res://match/match.gd" id="1_qjwkr"]
+[ext_resource type="PackedScene" uid="uid://bwqmye3vpefem" path="res://match/card_consumer.tscn" id="2_bfv77"]
+
+[node name="Match" type="Control" unique_id=1203959160]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qjwkr")
+card_consumer_scene = ExtResource("2_bfv77")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1167831289]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.020843744, 5.583167e-06, 0.5159393, 1)
+
+[node name="ComponentCardConsumersGoHere" type="Control" parent="." unique_id=402622010]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ActionCardConsumer" parent="." unique_id=1465105692 instance=ExtResource("2_bfv77")]
+layout_mode = 1
+offset_left = 5.0
+offset_top = 4.0
+offset_right = -6.0
+offset_bottom = -272.0
+accepted_card_list = Array[int]([0])
+
+[node name="NextTurn" type="Button" parent="." unique_id=94131815]
+layout_mode = 0
+offset_left = 1154.0
+offset_top = 466.0
+offset_right = 1244.0
+offset_bottom = 497.0
+disabled = true
+text = "END TURN"
+
+[connection signal="pressed" from="NextTurn" to="." method="_on_next_turn_pressed"]
