@@ -1,6 +1,21 @@
 [gd_scene format=3 uid="uid://cf0cdiytsuau8"]
 
 [ext_resource type="Script" uid="uid://cjssxwfj5be4t" path="res://turn_manager.gd" id="1_u6owk"]
+[ext_resource type="Script" uid="uid://bn1lppbv7qjxf" path="res://ship_stats.gd" id="2_tsdb7"]
+
+[sub_resource type="Resource" id="Resource_eyi30"]
+script = ExtResource("2_tsdb7")
+power_reset = 1
+power_max = 3
+metadata/_custom_type_script = "uid://bn1lppbv7qjxf"
+
+[sub_resource type="Resource" id="Resource_qr1yw"]
+script = ExtResource("2_tsdb7")
+power_reset = 1
+power_max = 3
+metadata/_custom_type_script = "uid://bn1lppbv7qjxf"
 
 [node name="TurnManager" type="Node" unique_id=1296911169]
 script = ExtResource("1_u6owk")
+player_stats = SubResource("Resource_eyi30")
+enemy_stats = SubResource("Resource_qr1yw")

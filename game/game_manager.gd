@@ -2,6 +2,8 @@ extends Node
 
 # needs to store data that persists between matches
 
+signal error_thrown(error_text : String)
+
 enum ComponentType {ATTACK, DEFENCE, POWER, HEALTH}
 
 @export var player_ship_data : ShipData
@@ -9,6 +11,8 @@ enum ComponentType {ATTACK, DEFENCE, POWER, HEALTH}
 @export var enemy_ship_data : ShipData
 
 @export var all_cards : Array[CardData] = []
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

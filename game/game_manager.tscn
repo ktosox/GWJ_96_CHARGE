@@ -2,13 +2,158 @@
 
 [ext_resource type="Script" uid="uid://3vmox1uy15j0" path="res://game_manager.gd" id="1_70yv6"]
 [ext_resource type="Script" uid="uid://bpc7pojq2jkg0" path="res://ship_data.gd" id="2_smx3j"]
-[ext_resource type="Script" uid="uid://bcd2ad6g0fhn3" path="res://card_editor.gd" id="4_d5upp"]
+[ext_resource type="Texture2D" uid="uid://veol2y8iixbv" path="res://icon.png" id="5_shwjl"]
 [ext_resource type="PackedScene" uid="uid://4lg3nth7uo4q" path="res://cards/card_editing_thing.tscn" id="5_vk86k"]
+[ext_resource type="Script" uid="uid://bumkj2560ahrl" path="res://card_data.gd" id="6_eakoi"]
 
 [sub_resource type="Resource" id="Resource_70yv6"]
 script = ExtResource("2_smx3j")
 name = "test ship"
 metadata/_custom_type_script = "uid://bpc7pojq2jkg0"
+
+[sub_resource type="Resource" id="Resource_shwjl"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+type = 1
+name = "he bue bue bue"
+illustration = ExtResource("5_shwjl")
+description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_8jrwq"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+type = 1
+name = "he bue bue bue"
+illustration = ExtResource("5_shwjl")
+description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_gth8u"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+name = "he bue bue bue"
+energy_cost = 2
+illustration = ExtResource("5_shwjl")
+description = "test test test"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_dq8jp"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+name = "he bue bue bue"
+energy_cost = 2
+illustration = ExtResource("5_shwjl")
+description = "test test test"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_yawsv"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+type = 1
+name = "he bue bue bue"
+illustration = ExtResource("5_shwjl")
+description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_le433"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+name = "he bue bue bue"
+energy_cost = 2
+illustration = ExtResource("5_shwjl")
+description = "test test test"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_2tadr"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+name = "he bue bue bue"
+energy_cost = 2
+illustration = ExtResource("5_shwjl")
+description = "test test test"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_tmn8n"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+type = 1
+name = "he bue bue bue"
+illustration = ExtResource("5_shwjl")
+description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_es4nv"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+name = "he bue bue bue"
+energy_cost = 2
+illustration = ExtResource("5_shwjl")
+description = "test test test"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_anra8"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+name = "he bue bue bue"
+energy_cost = 2
+illustration = ExtResource("5_shwjl")
+description = "test test test"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_f0lch"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+type = 1
+name = "he bue bue bue"
+illustration = ExtResource("5_shwjl")
+description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_lx373"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+name = "he bue bue bue"
+energy_cost = 2
+illustration = ExtResource("5_shwjl")
+description = "test test test"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_s6dek"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+name = "he bue bue bue"
+energy_cost = 2
+illustration = ExtResource("5_shwjl")
+description = "test test test"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_d246e"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+type = 1
+name = "he bue bue bue"
+illustration = ExtResource("5_shwjl")
+description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_nvy02"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+name = "he bue bue bue"
+energy_cost = 2
+illustration = ExtResource("5_shwjl")
+description = "test test test"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_7bexq"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+name = "he bue bue bue"
+energy_cost = 2
+illustration = ExtResource("5_shwjl")
+description = "test test test"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
 
 [node name="GameManager" type="Node" unique_id=1719287768]
 script = ExtResource("1_70yv6")
@@ -20,19 +165,30 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("4_d5upp")
 
-[node name="CardEditingThing" parent="CardEditor" unique_id=1742103350 instance=ExtResource("5_vk86k")]
+[node name="CardEditingThing0" parent="CardEditor" unique_id=1742103350 instance=ExtResource("5_vk86k")]
 layout_mode = 2
+card_data = SubResource("Resource_shwjl")
 
-[node name="CostField" parent="CardEditor/CardEditingThing" index="1" unique_id=1740874865]
+[node name="CostField" parent="CardEditor/CardEditingThing0" index="1" unique_id=1740874865]
 text = "1"
 
-[node name="CheckButton" parent="CardEditor/CardEditingThing" index="13" unique_id=537236991]
+[node name="CheckButton" parent="CardEditor/CardEditingThing0" index="13" unique_id=537236991]
+button_pressed = false
+
+[node name="CardEditingThing1" parent="CardEditor" unique_id=1894541364 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+card_data = SubResource("Resource_8jrwq")
+
+[node name="CostField" parent="CardEditor/CardEditingThing1" index="1" unique_id=1740874865]
+text = "1"
+
+[node name="CheckButton" parent="CardEditor/CardEditingThing1" index="13" unique_id=537236991]
 button_pressed = false
 
 [node name="CardEditingThing2" parent="CardEditor" unique_id=137667816 instance=ExtResource("5_vk86k")]
 layout_mode = 2
+card_data = SubResource("Resource_gth8u")
 
 [node name="CostField" parent="CardEditor/CardEditingThing2" index="1" unique_id=1740874865]
 text = "2"
@@ -40,5 +196,153 @@ text = "2"
 [node name="DescField" parent="CardEditor/CardEditingThing2" index="7" unique_id=180599192]
 text = "test test test"
 
-[editable path="CardEditor/CardEditingThing"]
+[node name="CardEditingThing3" parent="CardEditor" unique_id=1665994995 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+card_data = SubResource("Resource_dq8jp")
+
+[node name="CostField" parent="CardEditor/CardEditingThing3" index="1" unique_id=1740874865]
+text = "2"
+
+[node name="DescField" parent="CardEditor/CardEditingThing3" index="7" unique_id=180599192]
+text = "test test test"
+
+[node name="CardEditingThing4" parent="CardEditor" unique_id=1692124199 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+card_data = SubResource("Resource_yawsv")
+
+[node name="CostField" parent="CardEditor/CardEditingThing4" index="1" unique_id=1740874865]
+text = "1"
+
+[node name="CheckButton" parent="CardEditor/CardEditingThing4" index="13" unique_id=537236991]
+button_pressed = false
+
+[node name="CardEditingThing5" parent="CardEditor" unique_id=372823236 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+card_data = SubResource("Resource_le433")
+
+[node name="CostField" parent="CardEditor/CardEditingThing5" index="1" unique_id=1740874865]
+text = "2"
+
+[node name="DescField" parent="CardEditor/CardEditingThing5" index="7" unique_id=180599192]
+text = "test test test"
+
+[node name="CardEditingThing6" parent="CardEditor" unique_id=1158178300 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+card_data = SubResource("Resource_2tadr")
+
+[node name="CostField" parent="CardEditor/CardEditingThing6" index="1" unique_id=1740874865]
+text = "2"
+
+[node name="DescField" parent="CardEditor/CardEditingThing6" index="7" unique_id=180599192]
+text = "test test test"
+
+[node name="CardEditingThing7" parent="CardEditor" unique_id=1845872980 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+card_data = SubResource("Resource_tmn8n")
+
+[node name="CostField" parent="CardEditor/CardEditingThing7" index="1" unique_id=1740874865]
+text = "1"
+
+[node name="CheckButton" parent="CardEditor/CardEditingThing7" index="13" unique_id=537236991]
+button_pressed = false
+
+[node name="CardEditingThing8" parent="CardEditor" unique_id=226779939 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+card_data = SubResource("Resource_es4nv")
+
+[node name="CostField" parent="CardEditor/CardEditingThing8" index="1" unique_id=1740874865]
+text = "2"
+
+[node name="DescField" parent="CardEditor/CardEditingThing8" index="7" unique_id=180599192]
+text = "test test test"
+
+[node name="CardEditingThing9" parent="CardEditor" unique_id=463837466 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+card_data = SubResource("Resource_anra8")
+
+[node name="CostField" parent="CardEditor/CardEditingThing9" index="1" unique_id=1740874865]
+text = "2"
+
+[node name="DescField" parent="CardEditor/CardEditingThing9" index="7" unique_id=180599192]
+text = "test test test"
+
+[node name="CardEditingThing10" parent="CardEditor" unique_id=282222979 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+card_data = SubResource("Resource_f0lch")
+
+[node name="CostField" parent="CardEditor/CardEditingThing10" index="1" unique_id=1740874865]
+text = "1"
+
+[node name="CheckButton" parent="CardEditor/CardEditingThing10" index="13" unique_id=537236991]
+button_pressed = false
+
+[node name="CardEditingThing11" parent="CardEditor" unique_id=1014143585 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+card_data = SubResource("Resource_lx373")
+
+[node name="CostField" parent="CardEditor/CardEditingThing11" index="1" unique_id=1740874865]
+text = "2"
+
+[node name="DescField" parent="CardEditor/CardEditingThing11" index="7" unique_id=180599192]
+text = "test test test"
+
+[node name="CardEditingThing12" parent="CardEditor" unique_id=2114927664 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+card_data = SubResource("Resource_s6dek")
+
+[node name="CostField" parent="CardEditor/CardEditingThing12" index="1" unique_id=1740874865]
+text = "2"
+
+[node name="DescField" parent="CardEditor/CardEditingThing12" index="7" unique_id=180599192]
+text = "test test test"
+
+[node name="CardEditingThing13" parent="CardEditor" unique_id=1174391723 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+card_data = SubResource("Resource_d246e")
+
+[node name="CostField" parent="CardEditor/CardEditingThing13" index="1" unique_id=1740874865]
+text = "1"
+
+[node name="CheckButton" parent="CardEditor/CardEditingThing13" index="13" unique_id=537236991]
+button_pressed = false
+
+[node name="CardEditingThing14" parent="CardEditor" unique_id=1663440043 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+card_data = SubResource("Resource_nvy02")
+
+[node name="CostField" parent="CardEditor/CardEditingThing14" index="1" unique_id=1740874865]
+text = "2"
+
+[node name="DescField" parent="CardEditor/CardEditingThing14" index="7" unique_id=180599192]
+text = "test test test"
+
+[node name="CardEditingThing15" parent="CardEditor" unique_id=1585272756 instance=ExtResource("5_vk86k")]
+layout_mode = 2
+card_data = SubResource("Resource_7bexq")
+
+[node name="CostField" parent="CardEditor/CardEditingThing15" index="1" unique_id=1740874865]
+text = "2"
+
+[node name="DescField" parent="CardEditor/CardEditingThing15" index="7" unique_id=180599192]
+text = "test test test"
+
+[node name="DeckEditor" type="VBoxContainer" parent="." unique_id=1920917276]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[editable path="CardEditor/CardEditingThing0"]
+[editable path="CardEditor/CardEditingThing1"]
 [editable path="CardEditor/CardEditingThing2"]
+[editable path="CardEditor/CardEditingThing3"]
+[editable path="CardEditor/CardEditingThing4"]
+[editable path="CardEditor/CardEditingThing5"]
+[editable path="CardEditor/CardEditingThing6"]
+[editable path="CardEditor/CardEditingThing7"]
+[editable path="CardEditor/CardEditingThing8"]
+[editable path="CardEditor/CardEditingThing9"]
+[editable path="CardEditor/CardEditingThing10"]
+[editable path="CardEditor/CardEditingThing11"]
+[editable path="CardEditor/CardEditingThing12"]
+[editable path="CardEditor/CardEditingThing13"]
+[editable path="CardEditor/CardEditingThing14"]
+[editable path="CardEditor/CardEditingThing15"]

@@ -5,6 +5,8 @@ extends Resource
 
 @export var name : String
 
+@export var starting_power : int = 1
+@export var max_power : int = 5
 
 
 # needs to store all ship segments

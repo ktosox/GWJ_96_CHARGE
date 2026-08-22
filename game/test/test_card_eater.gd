@@ -2,7 +2,7 @@ extends Control
 
 signal card_consumed(card_data : CardData)
 
-@export var accepted_card_list : Array[GameManager.CardType] = []
+@export var accepted_card_list : Array[CardData.CardType] = []
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	var card_data = data as CardData
