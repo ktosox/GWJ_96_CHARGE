@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dsgm6gw7blx2y"]
+
+[ext_resource type="Script" uid="uid://hc8ciig230rb" path="res://match/card_holder.gd" id="1_hnej4"]
+
+[node name="CardHolder" type="HBoxContainer" unique_id=1143203192]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -797.0
+offset_bottom = -536.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hnej4")
+
+[node name="DummyFill" type="ColorRect" parent="." unique_id=1896467253]
+layout_mode = 2
+size_flags_horizontal = 3

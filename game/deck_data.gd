@@ -6,3 +6,9 @@ extends Resource
 func shuffle():
 	cards.shuffle()
 	pass
+
+
+func draw_card() -> CardData :
+	if cards.size() == 0:
+		return null
+	return cards.pop_front()

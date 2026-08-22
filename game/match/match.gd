@@ -2,6 +2,10 @@ extends Control
 
 @export var card_consumer_scene : PackedScene
 
+@export var card_scene : PackedScene
+
+@export var component_consumers_go_here : Control
+
 var power_queue = [] # all of the slots and cables that need to get power
 
 # Called when the node enters the scene tree for the first time.
@@ -9,10 +13,31 @@ func _ready() -> void:
 	TurnManager.connect("phase_changed",react_to_phase_change)
 	pass # Replace with function body.
 
+func draw_card_player():
+	var card_anchor = $CardHolder.create_card_anchor() as Control
+	var new_card = card_scene.instantiate()
+	var card_data = TurnManager.player_deck.draw_card()
+	assert(card_data != null) # if its a null then some kind of Fatigue system would be needed
+	
+	new_card.load_data(card_data)
+	card_anchor.add_child(new_card)
+	pass
+
+
 
 func update_power_queue():
 	# collect all of the cables and slots that are on,
 	# probably by asking each segemny for a list and then putting them in order
+	pass
+
+func add_card_consumers():
+	# needs a list of all slots
+	# needs to create a card consumer for evry slot
+	var all_slots : Array
+	for slot in all_slots:
+		var new_consumer = card_consumer_scene.instantiate()
+		# code that links consumer to slot and places him on the correct spot goes here
+		component_consumers_go_here.add_child(new_consumer)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -69,10 +94,13 @@ func react_to_phase_change():
 
 # needs to dynamicly add card consumers over slots and link them
 
-# needs to detect when players play phase arrives and enable / dissable the NextTurn button
-
 
 func _on_next_turn_pressed() -> void:
 	assert(TurnManager.current_phase == TurnManager.Phases.PLAY and TurnManager.is_player_turn)
 	TurnManager.progress_turn(TurnManager.Phases.PLAY)
+	pass # Replace with function body.
+
+
+func _on_test_add_anchor_pressed() -> void:
+	$CardHolder.create_card_anchor()
 	pass # Replace with function body.

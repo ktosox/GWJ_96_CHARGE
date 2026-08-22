@@ -4,7 +4,13 @@ signal phase_changed
 
 signal turn_changed
 
+signal health_changed(is_player : bool, new_health : int)
 
+signal power_changed(is_player : bool, new_power : int)
+
+@export var player_deck : DeckData
+
+@export var enemy_deck : DeckData
 
 #Turn mananger
 #- keeps track of whos turn is it now
@@ -109,3 +115,14 @@ func use_power(amount : int) -> void :
 		active_stats = enemy_stats
 	active_stats.power_current -= amount
 	assert(active_stats.power_current > -1)
+	power_changed.emit(is_player_turn, active_stats.power_current)
+
+func deal_damage(amount : int, is_player = true):
+	var active_stats : ShipStats
+	if is_player:
+		active_stats = player_stats
+	else:
+		active_stats = enemy_stats
+	active_stats.health_current -= amount
+	health_changed.emit(is_player, active_stats.health_current)
+	pass
