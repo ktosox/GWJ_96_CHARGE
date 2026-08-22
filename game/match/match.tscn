@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ia6bxa0vkxkb" path="res://match/match.gd" id="1_qjwkr"]
 [ext_resource type="PackedScene" uid="uid://bwqmye3vpefem" path="res://match/card_consumer.tscn" id="2_bfv77"]
+[ext_resource type="PackedScene" uid="uid://cug1trmyk7gh5" path="res://match/card.tscn" id="3_45syu"]
 [ext_resource type="PackedScene" uid="uid://dsgm6gw7blx2y" path="res://match/card_holder.tscn" id="3_610r7"]
 
 [node name="Match" type="Control" unique_id=1203959160 node_paths=PackedStringArray("component_consumers_go_here")]
@@ -11,9 +12,28 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_qjwkr")
 card_consumer_scene = ExtResource("2_bfv77")
+card_scene = ExtResource("3_45syu")
 component_consumers_go_here = NodePath("ComponentCardConsumersGoHere")
+
+[node name="TestStuff" type="CanvasLayer" parent="." unique_id=1154619121]
+
+[node name="TestAddAnchor" type="Button" parent="TestStuff" unique_id=1293171971]
+visible = false
+offset_left = 927.0
+offset_top = 495.0
+offset_right = 1057.0
+offset_bottom = 526.0
+text = "test add anchor"
+
+[node name="TestDrawCard" type="Button" parent="TestStuff" unique_id=1340316873]
+offset_left = 949.0
+offset_top = 486.0
+offset_right = 1069.0
+offset_bottom = 517.0
+text = "test draw card"
 
 [node name="Background" type="ColorRect" parent="." unique_id=1167831289]
 layout_mode = 1
@@ -51,20 +71,12 @@ text = "END TURN"
 
 [node name="CardHolder" parent="." unique_id=1391177326 instance=ExtResource("3_610r7")]
 layout_mode = 1
-offset_left = 158.0
-offset_top = 455.0
-offset_right = -469.0
-offset_bottom = -30.0
+offset_left = 115.0
+offset_top = 508.0
+offset_right = -417.0
+offset_bottom = 5.0
+mouse_filter = 2
 
-[node name="TestStuff" type="CanvasLayer" parent="." unique_id=1154619121]
-
-[node name="TestAddAnchor" type="Button" parent="TestStuff" unique_id=1293171971]
-visible = false
-offset_left = 927.0
-offset_top = 495.0
-offset_right = 1057.0
-offset_bottom = 526.0
-text = "test add anchor"
-
-[connection signal="pressed" from="NextTurn" to="." method="_on_next_turn_pressed"]
 [connection signal="pressed" from="TestStuff/TestAddAnchor" to="." method="_on_test_add_anchor_pressed"]
+[connection signal="pressed" from="TestStuff/TestDrawCard" to="." method="_on_test_draw_card_pressed"]
+[connection signal="pressed" from="NextTurn" to="." method="_on_next_turn_pressed"]

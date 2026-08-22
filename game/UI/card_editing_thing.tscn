@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://4lg3nth7uo4q"]
 
 [ext_resource type="Texture2D" uid="uid://veol2y8iixbv" path="res://icon.png" id="1_33a7u"]
-[ext_resource type="Script" uid="uid://dj7pq805b74if" path="res://cards/card_editing_thing.gd" id="1_jrgms"]
+[ext_resource type="Script" uid="uid://dj7pq805b74if" path="res://UI/card_editing_thing.gd" id="1_jrgms"]
 [ext_resource type="Script" uid="uid://bumkj2560ahrl" path="res://card_data.gd" id="2_x4cte"]
 
 [sub_resource type="Resource" id="Resource_jrgms"]

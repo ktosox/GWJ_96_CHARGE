@@ -1,7 +1,46 @@
 [gd_scene format=3 uid="uid://cf0cdiytsuau8"]
 
 [ext_resource type="Script" uid="uid://cjssxwfj5be4t" path="res://turn_manager.gd" id="1_u6owk"]
+[ext_resource type="Script" uid="uid://bumkj2560ahrl" path="res://card_data.gd" id="2_btabf"]
 [ext_resource type="Script" uid="uid://bn1lppbv7qjxf" path="res://ship_stats.gd" id="2_tsdb7"]
+[ext_resource type="Script" uid="uid://dnhhsihp8u1yj" path="res://deck_data.gd" id="3_qjfnw"]
+
+[sub_resource type="Resource" id="Resource_k8j4r"]
+script = ExtResource("2_btabf")
+energy_cost = 2
+description = "gfdgsdgsgf gfsfdgsg fgsdfgsdgf"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_is1rr"]
+script = ExtResource("2_btabf")
+name = "debug name gsdfgsd"
+description = "dfadfaettwret fgtsdfgsdgfsdfg"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_fy4bm"]
+script = ExtResource("2_btabf")
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_o01mu"]
+script = ExtResource("2_btabf")
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_dpklt"]
+script = ExtResource("2_btabf")
+energy_cost = 4
+description = "fasdfadf fadafaf"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_8s50u"]
+script = ExtResource("2_btabf")
+energy_cost = 8
+description = "fasdfaf dfadsfa fasdfafdafasdf fadsfadf"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_45syu"]
+script = ExtResource("3_qjfnw")
+cards = Array[ExtResource("2_btabf")]([SubResource("Resource_k8j4r"), SubResource("Resource_is1rr"), SubResource("Resource_fy4bm"), SubResource("Resource_o01mu"), SubResource("Resource_dpklt"), SubResource("Resource_8s50u")])
+metadata/_custom_type_script = "uid://dnhhsihp8u1yj"
 
 [sub_resource type="Resource" id="Resource_eyi30"]
 script = ExtResource("2_tsdb7")
@@ -17,5 +56,6 @@ metadata/_custom_type_script = "uid://bn1lppbv7qjxf"
 
 [node name="TurnManager" type="Node" unique_id=1296911169]
 script = ExtResource("1_u6owk")
+player_deck = SubResource("Resource_45syu")
 player_stats = SubResource("Resource_eyi30")
 enemy_stats = SubResource("Resource_qr1yw")

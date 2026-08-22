@@ -15,12 +15,15 @@ func _ready() -> void:
 
 func draw_card_player():
 	var card_anchor = $CardHolder.create_card_anchor() as Control
-	var new_card = card_scene.instantiate()
+	var new_card = card_scene.instantiate() as Control
 	var card_data = TurnManager.player_deck.draw_card()
+	
 	assert(card_data != null) # if its a null then some kind of Fatigue system would be needed
 	
-	new_card.load_data(card_data)
+	new_card.card_data = card_data
+	
 	card_anchor.add_child(new_card)
+	new_card.connect("tree_exited",card_anchor.queue_free)
 	pass
 
 
@@ -103,4 +106,9 @@ func _on_next_turn_pressed() -> void:
 
 func _on_test_add_anchor_pressed() -> void:
 	$CardHolder.create_card_anchor()
+	pass # Replace with function body.
+
+
+func _on_test_draw_card_pressed() -> void:
+	draw_card_player()
 	pass # Replace with function body.

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bievw1si2sopf"]
 
-[ext_resource type="Script" uid="uid://cgt2g7sja7bjl" path="res://UI/test_card_place_holder.gd" id="1_p52km"]
+[ext_resource type="Script" uid="uid://cgt2g7sja7bjl" path="res://test/test_card_place_holder.gd" id="1_p52km"]
 
 [node name="CardPlaceHolder" type="CenterContainer" unique_id=224069834]
 custom_minimum_size = Vector2(120, 160)

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dtnv65f2a6rm4"]
 
-[ext_resource type="PackedScene" uid="uid://bievw1si2sopf" path="res://UI/test_card_place_holder.tscn" id="1_3ok48"]
-[ext_resource type="Script" uid="uid://w5cd5b2lyyba" path="res://UI/player_hand_space.gd" id="1_r62aa"]
-[ext_resource type="PackedScene" uid="uid://c8kgjw8cw1kpv" path="res://UI/card_slot.tscn" id="1_wc7ir"]
-[ext_resource type="Script" uid="uid://dkibpmidf16s6" path="res://UI/test_panel.gd" id="4_7krub"]
+[ext_resource type="PackedScene" uid="uid://bievw1si2sopf" path="res://test/test_card_place_holder.tscn" id="1_3ok48"]
+[ext_resource type="Script" uid="uid://w5cd5b2lyyba" path="res://test/player_hand_space.gd" id="1_r62aa"]
+[ext_resource type="PackedScene" uid="uid://c8kgjw8cw1kpv" path="res://test/card_slot.tscn" id="1_wc7ir"]
+[ext_resource type="Script" uid="uid://dkibpmidf16s6" path="res://test/test_panel.gd" id="4_7krub"]
 
 [node name="PlayerHandSpace" type="Control" unique_id=146149326 node_paths=PackedStringArray("card_holder")]
 layout_mode = 3
