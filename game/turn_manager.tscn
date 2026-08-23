@@ -7,6 +7,7 @@
 
 [sub_resource type="Resource" id="Resource_k8j4r"]
 script = ExtResource("2_btabf")
+type = 1
 energy_cost = 2
 description = "gfdgsdgsgf gfsfdgsg fgsdfgsdgf"
 metadata/_custom_type_script = "uid://bumkj2560ahrl"
@@ -33,6 +34,7 @@ metadata/_custom_type_script = "uid://bumkj2560ahrl"
 
 [sub_resource type="Resource" id="Resource_8s50u"]
 script = ExtResource("2_btabf")
+type = 1
 energy_cost = 8
 description = "fasdfaf dfadsfa fasdfafdafasdf fadsfadf"
 metadata/_custom_type_script = "uid://bumkj2560ahrl"

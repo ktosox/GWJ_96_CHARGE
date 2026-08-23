@@ -7,6 +7,7 @@ func create_card_anchor() -> Control :
 	var new_anchor = Control.new()
 	new_anchor.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	new_anchor.connect("tree_exited",re_evalute_dummy_fill)
+	new_anchor.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(new_anchor)
 	move_child(new_anchor,0)
 	#new_anchor.move_to_front()

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Ima Firin Mah Broadside"
-run/main_scene="uid://wvuatxmcis0h"
+run/main_scene="uid://b6rdhhqnueyf2"
 config/features=PackedStringArray("4.7")
 config/icon="res://icon.png"
 

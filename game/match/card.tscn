@@ -2,19 +2,22 @@
 
 [ext_resource type="Script" uid="uid://tjb8wetbeg7t" path="res://match/card.gd" id="1_316cp"]
 [ext_resource type="Theme" uid="uid://vxh5scpirmqu" path="res://match/card_theme.tres" id="1_m4dke"]
-[ext_resource type="Texture2D" uid="uid://veol2y8iixbv" path="res://icon.png" id="2_uhoyv"]
 [ext_resource type="Script" uid="uid://bumkj2560ahrl" path="res://card_data.gd" id="3_x77cs"]
+[ext_resource type="Texture2D" uid="uid://canx8wrurqmx1" path="res://resources/icons/gr_03.png" id="4_x77cs"]
 
 [sub_resource type="Resource" id="Resource_m4dke"]
 script = ExtResource("3_x77cs")
 metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qhx3"]
+size = Vector2(151.37, 234.145)
 
 [sub_resource type="Animation" id="Animation_kjpy2"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/path = NodePath("CardBody:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -26,26 +29,26 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:offset_transform_scale")
+tracks/1/path = NodePath("CardBody:offset_transform_scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.6, 0.6)]
+"values": [Vector2(1, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect:offset_transform_position")
+tracks/2/path = NodePath("CardBody:offset_transform_position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -100)]
+"values": [Vector2(0, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -67,7 +70,7 @@ capture_included = true
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/path = NodePath("CardBody:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -79,7 +82,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:offset_transform_scale")
+tracks/1/path = NodePath("CardBody:offset_transform_scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -91,7 +94,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect:offset_transform_position")
+tracks/2/path = NodePath("CardBody:offset_transform_position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -108,7 +111,7 @@ capture_included = true
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/path = NodePath("CardBody:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -120,7 +123,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:offset_transform_scale")
+tracks/1/path = NodePath("CardBody:offset_transform_scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -132,7 +135,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect:offset_transform_position")
+tracks/2/path = NodePath("CardBody:offset_transform_position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -147,7 +150,7 @@ resource_name = "spawn"
 length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath(".:offset_transform_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -156,6 +159,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
 "values": [Vector2(-600, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CardBody:offset_transform_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -100)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CardBody:offset_transform_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.6, 0.6)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_316cp"]
@@ -166,39 +193,42 @@ _data = {
 &"spawn": SubResource("Animation_x77cs")
 }
 
-[node name="Card" type="CenterContainer" unique_id=1040990408 node_paths=PackedStringArray("name_label", "cost_label", "desc_label") groups=["card_in_hand"]]
+[node name="Card" type="CenterContainer" unique_id=1040990408 node_paths=PackedStringArray("card_body", "name_label", "cost_label", "desc_label", "type_label") groups=["card_in_hand"]]
+offset_right = 238.0
+offset_bottom = 385.0
 offset_transform_enabled = true
+mouse_filter = 2
 theme = ExtResource("1_m4dke")
 script = ExtResource("1_316cp")
-name_label = NodePath("ColorRect/Name")
-cost_label = NodePath("ColorRect/Cost")
-desc_label = NodePath("ColorRect/Description")
+card_body = NodePath("CardBody")
+name_label = NodePath("CardBody/Name")
+cost_label = NodePath("CardBody/Cost")
+desc_label = NodePath("CardBody/Description")
+type_label = NodePath("CardBody/Type")
 card_data = SubResource("Resource_m4dke")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=90824739]
+[node name="CardBody" type="ColorRect" parent="." unique_id=90824739]
 custom_minimum_size = Vector2(238, 385)
 layout_mode = 2
 offset_transform_enabled = true
-offset_transform_position = Vector2(0, -100)
-offset_transform_scale = Vector2(0.6, 0.6)
 mouse_filter = 2
 color = Color(0.30312774, 0.22138211, 0.6785556, 1)
 
-[node name="Description" type="Label" parent="ColorRect" unique_id=421131407]
-custom_minimum_size = Vector2(0, 150)
-custom_maximum_size = Vector2(220, 150)
+[node name="Description" type="Label" parent="CardBody" unique_id=421131407]
+custom_minimum_size = Vector2(0, 130)
+custom_maximum_size = Vector2(220, 130)
 layout_mode = 0
-offset_left = 8.0
-offset_top = 226.0
-offset_right = 228.0
-offset_bottom = 376.0
+offset_left = 11.0
+offset_top = 244.0
+offset_right = 231.0
+offset_bottom = 374.0
 theme_override_colors/font_color = Color(0.18651977, 0.18621671, 0.08638296, 1)
 theme_override_font_sizes/font_size = 15
 text = "he bue bue bue bue bue f f adsfafd  fasdfasdfa  fdasfadf f adfa sdf adsf afd fa sdf adsf afd bue bue bu"
-vertical_alignment = 1
+horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="ColorRect/Description" unique_id=279512285]
+[node name="ColorRect" type="ColorRect" parent="CardBody/Description" unique_id=279512285]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -208,24 +238,26 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.51718444, 0.5171845, 0.51718444, 1)
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=1838408549]
+[node name="TextureRect" type="TextureRect" parent="CardBody" unique_id=1838408549]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
 offset_left = 10.0
 offset_top = -2.0
 offset_right = 229.0
 offset_bottom = 251.0
-texture = ExtResource("2_uhoyv")
+texture = ExtResource("4_x77cs")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Name" type="Label" parent="ColorRect" unique_id=2067428382]
+[node name="Name" type="Label" parent="CardBody" unique_id=2067428382]
 layout_mode = 0
-offset_right = 116.0
-offset_bottom = 23.0
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 122.0
+offset_bottom = 25.0
 text = "hebue bue bue"
 
-[node name="ColorRect" type="ColorRect" parent="ColorRect/Name" unique_id=931865328]
+[node name="ColorRect" type="ColorRect" parent="CardBody/Name" unique_id=931865328]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -235,16 +267,16 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Cost" type="Label" parent="ColorRect" unique_id=822402887]
+[node name="Cost" type="Label" parent="CardBody" unique_id=822402887]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 205.0
-offset_right = 23.0
-offset_bottom = 228.0
+offset_left = 14.0
+offset_top = 33.0
+offset_right = 24.0
+offset_bottom = 56.0
 text = "8"
 horizontal_alignment = 2
 
-[node name="ColorRect" type="ColorRect" parent="ColorRect/Cost" unique_id=1205564049]
+[node name="ColorRect" type="ColorRect" parent="CardBody/Cost" unique_id=1205564049]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -259,9 +291,36 @@ offset_transform_rotation = -0.7853982
 offset_transform_pivot_ratio = Vector2(0, 0)
 color = Color(0.18119869, 0.49138153, 0.34243402, 1)
 
+[node name="Type" type="Label" parent="CardBody" unique_id=132543097]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 357.0
+offset_right = 161.0
+offset_bottom = 380.0
+text = "aaaaaa "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CardBody/Type" unique_id=168755603]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1224769458]
+position = Vector2(118, 92)
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2136169214]
+shape = SubResource("RectangleShape2D_1qhx3")
+
 [node name="CardAnimator" type="AnimationPlayer" parent="." unique_id=1367912091]
 libraries/ = SubResource("AnimationLibrary_316cp")
 autoplay = &"spawn"
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

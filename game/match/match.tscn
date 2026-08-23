@@ -42,6 +42,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.020843744, 5.583167e-06, 0.5159393, 1)
 
 [node name="ComponentCardConsumersGoHere" type="Control" parent="." unique_id=402622010]
@@ -51,6 +52,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="ActionCardConsumer" parent="." unique_id=1465105692 instance=ExtResource("2_bfv77")]
 layout_mode = 1
