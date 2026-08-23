@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bwqmye3vpefem" path="res://match/card_consumer.tscn" id="2_bfv77"]
 [ext_resource type="PackedScene" uid="uid://cug1trmyk7gh5" path="res://match/card.tscn" id="3_45syu"]
 [ext_resource type="PackedScene" uid="uid://dsgm6gw7blx2y" path="res://match/card_holder.tscn" id="3_610r7"]
+[ext_resource type="PackedScene" uid="uid://rg8y8cmajebf" path="res://match/background.tscn" id="4_k8j4r"]
 
 [node name="Match" type="Control" unique_id=1203959160 node_paths=PackedStringArray("component_consumers_go_here")]
 layout_mode = 3
@@ -35,15 +36,7 @@ offset_right = 1069.0
 offset_bottom = 517.0
 text = "test draw card"
 
-[node name="Background" type="ColorRect" parent="." unique_id=1167831289]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0.020843744, 5.583167e-06, 0.5159393, 1)
+[node name="Background" parent="." unique_id=1325761621 instance=ExtResource("4_k8j4r")]
 
 [node name="ComponentCardConsumersGoHere" type="Control" parent="." unique_id=402622010]
 layout_mode = 1
