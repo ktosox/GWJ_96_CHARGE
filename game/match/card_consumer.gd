@@ -13,7 +13,7 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 
 func _drop_data(at_position: Vector2, data: Variant) -> void:
 	var card_data = data as CardData
-	emit_signal("card_consumed")
+	emit_signal("card_consumed",data)
 	card_data.linked_physical_card.queue_free()
 	
 	pass

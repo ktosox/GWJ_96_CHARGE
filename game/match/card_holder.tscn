@@ -16,5 +16,5 @@ script = ExtResource("1_hnej4")
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.8
+size_flags_stretch_ratio = 0.4
 mouse_filter = 2
