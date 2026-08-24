@@ -1,12 +1,31 @@
 [gd_scene format=3 uid="uid://rg8y8cmajebf"]
 
-[node name="Background" type="Parallax2D" unique_id=1325761621]
+[sub_resource type="Gradient" id="Gradient_4vpem"]
+offsets = PackedFloat32Array(0.50328946, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1242463028]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_8bh00"]
+frequency = 0.0002
+offset = Vector3(-98.04, -621.36, 0)
+fractal_type = 2
+fractal_octaves = 3
+fractal_lacunarity = 5.875
+fractal_gain = 3.265
+fractal_weighted_strength = 0.62
+fractal_ping_pong_strength = 1.23
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_aobkh"]
+width = 1280
+height = 720
+noise = SubResource("FastNoiseLite_8bh00")
+color_ramp = SubResource("Gradient_4vpem")
+seamless = true
+
+[node name="Background" type="Polygon2D" unique_id=1467110047]
 color = Color(0, 0.06935053, 0.13712674, 1)
 polygon = PackedVector2Array(0, 0, 1280, 0, 1280, 720, 0, 720)
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1649212074]
+[node name="DistantStars" type="CPUParticles2D" parent="." unique_id=1649212074]
 position = Vector2(-19, 345)
 amount = 45
 lifetime = 8.0
@@ -26,3 +45,12 @@ angle_min = -49.1
 angle_max = 335.5
 scale_amount_min = 1.5
 scale_amount_max = 4.0
+
+[node name="Clouds" type="Parallax2D" parent="." unique_id=1276811243]
+repeat_size = Vector2(1280, 0)
+autoscroll = Vector2(60, 0)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Clouds" unique_id=390976684]
+color = Color(0.7033289, 0.6842016, 0.9951677, 1)
+texture = SubResource("NoiseTexture2D_aobkh")
+polygon = PackedVector2Array(0, 0, 1280, 0, 1280, 720, 0, 720)
