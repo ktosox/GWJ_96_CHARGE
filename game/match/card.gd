@@ -4,7 +4,7 @@ var selected = false
 
 var grabbed = false
 
-var mouse_offset : Vector2
+#var mouse_offset : Vector2
 
 @export var card_body : ColorRect
 
@@ -60,7 +60,7 @@ func _input(event: InputEvent) -> void:
 func grab():
 	grabbed = true
 	announce_grab()
-	mouse_offset = get_local_mouse_position()
+	#mouse_offset = get_local_mouse_position()
 
 	var test_preview = CenterContainer.new()
 	test_preview.use_top_left = true
@@ -70,6 +70,10 @@ func grab():
 	test_preview.add_child(duplicate)
 	call_deferred("force_drag",card_data,test_preview)
 	visible = false
+	var all_other_cards = get_tree().get_nodes_in_group("card_in_hand")
+	all_other_cards.erase(self)
+	for card in all_other_cards:
+		card.lock_select()
 	pass
 
 
@@ -77,9 +81,21 @@ func grab():
 func un_grab():
 	visible = true
 	grabbed = false
-
+	
+	var all_other_cards = get_tree().get_nodes_in_group("card_in_hand")
+	all_other_cards.erase(self)
+	for card in all_other_cards:
+		card.unlock_select()
+	de_select()
 	pass
 
+func lock_select():
+	$Area2D/CollisionShape2D.disabled = true
+	pass
+
+func unlock_select():
+	$Area2D/CollisionShape2D.disabled = false
+	pass
 
 func de_select():
 	selected = false
@@ -88,25 +104,35 @@ func de_select():
 	$CardAnimator.play("de-select")
 	pass
 
-
-func _on_area_2d_mouse_entered() -> void:
-
+func select():
+	selected = true
+	card_body.z_index = 5
+	$CardAnimator.play("select")
 	var all_other_cards = get_tree().get_nodes_in_group("card_in_hand")
 	all_other_cards.erase(self)
 	for card in all_other_cards:
-		if card.grabbed:
-			return
-	selected = true
-	for card in all_other_cards:
 		if card.selected:
 			card.de_select()
-	card_body.z_index = 5
+	pass
+
+
+func _on_area_2d_mouse_entered() -> void:
+
 	
-	$CardAnimator.play("select")
+	select()
+	
 	pass # Replace with function body.
 
 
 func _on_area_2d_mouse_exited() -> void:
-	de_select()
 
+	if grabbed:
+		return
+	if selected:
+		de_select()
+
+	
+
+	
+	
 	pass # Replace with function body.
