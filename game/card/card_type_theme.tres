@@ -1,0 +1,10 @@
+[gd_resource type="Theme" format=3 uid="uid://ccmgq072m0sv1"]
+
+[ext_resource type="FontFile" uid="uid://dracwwc4q4fpe" path="res://resources/fonts/FreudianSlip.ttf" id="1_inpyf"]
+
+[resource]
+Label/colors/font_color = Color(1, 0.9137255, 0.03529412, 1)
+Label/colors/font_outline_color = Color(0.22745098, 0, 0, 1)
+Label/constants/outline_size = 6
+Label/font_sizes/font_size = 27
+Label/fonts/font = ExtResource("1_inpyf")

@@ -1,0 +1,11 @@
+[gd_resource type="Theme" format=3 uid="uid://dm1ygfp4oape1"]
+
+[ext_resource type="FontFile" uid="uid://cctl6vdrm0uxy" path="res://resources/fonts/hesia/Hesia-Regular.ttf" id="1_7kswg"]
+
+[resource]
+Label/colors/font_shadow_color = Color(0.43137255, 0.43137255, 0.43137255, 0.77254903)
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = -2
+Label/constants/shadow_outline_size = 2
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("1_7kswg")

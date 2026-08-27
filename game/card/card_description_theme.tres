@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://dhratenbk83rp"]
+
+[ext_resource type="FontFile" uid="uid://b75p23h47kgm0" path="res://resources/fonts/tonight_friend/Tonight Friend.otf" id="1_ou1xp"]
+
+[resource]
+Label/fonts/font = ExtResource("1_ou1xp")
