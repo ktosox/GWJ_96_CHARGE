@@ -118,7 +118,6 @@ func select():
 
 func _on_area_2d_mouse_entered() -> void:
 
-	
 	select()
 	
 	pass # Replace with function body.

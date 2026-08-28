@@ -13,7 +13,7 @@ script = ExtResource("3_x77cs")
 metadata/_custom_type_script = "uid://bumkj2560ahrl"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qhx3"]
-size = Vector2(151.37, 234.145)
+size = Vector2(127, 250)
 
 [sub_resource type="Animation" id="Animation_kjpy2"]
 length = 0.001
@@ -239,6 +239,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.51718444, 0.5171845, 0.51718444, 1)
 
 [node name="TextureRect" type="TextureRect" parent="CardBody" unique_id=1838408549]
@@ -248,6 +249,7 @@ offset_left = 10.0
 offset_top = -2.0
 offset_right = 229.0
 offset_bottom = 251.0
+mouse_filter = 2
 texture = ExtResource("4_x77cs")
 expand_mode = 1
 stretch_mode = 5
@@ -264,11 +266,16 @@ text = "hebue bue bue"
 [node name="ColorRect" type="ColorRect" parent="CardBody/Name" unique_id=931865328]
 show_behind_parent = true
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 6.0
+offset_right = 6.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Cost" type="Label" parent="CardBody" unique_id=822402887]
@@ -296,6 +303,7 @@ offset_transform_enabled = true
 offset_transform_position = Vector2(-8, 20)
 offset_transform_rotation = -0.7853982
 offset_transform_pivot_ratio = Vector2(0, 0)
+mouse_filter = 2
 color = Color(0.99999994, 0.64880675, 0.19919497, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="CardBody" unique_id=1089265455]
@@ -307,6 +315,7 @@ anchor_bottom = 1.0
 offset_top = -28.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 
 [node name="Type" type="Label" parent="CardBody/CenterContainer" unique_id=132543097]
 layout_mode = 2
@@ -323,6 +332,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1224769458]

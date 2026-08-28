@@ -3,8 +3,8 @@
 [ext_resource type="FontFile" uid="uid://ci7dni31iw7g3" path="res://resources/fonts/masa_practice/Masa Practice.ttf" id="1_ve6qm"]
 
 [resource]
-Label/colors/font_color = Color(0.93333334, 0.8862745, 0.14509805, 1)
-Label/colors/font_outline_color = Color(0.90588236, 0.9019608, 0.69803923, 0.7529412)
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(0.79607844, 0.78431374, 0.48235294, 0.22745098)
 Label/constants/outline_size = 8
-Label/font_sizes/font_size = 32
+Label/font_sizes/font_size = 42
 Label/fonts/font = ExtResource("1_ve6qm")
