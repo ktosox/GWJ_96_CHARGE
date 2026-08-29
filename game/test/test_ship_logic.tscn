@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://doh6udh7nyvcp"]
+
+[node name="TestShipLogic" type="Control" unique_id=1881262465]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Todo" type="Label" parent="." unique_id=1247203701]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "needs to show slots and connections
+needs to show progress of power
+needs to place  card consumers"

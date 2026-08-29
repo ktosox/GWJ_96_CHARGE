@@ -26,7 +26,7 @@ offset_top = 18.0
 offset_right = 1130.0
 offset_bottom = 67.0
 text = "Background
-- something generally space-y and scrolling"
+x something generally space-y and scrolling"
 
 [node name="Cards" type="Label" parent="." unique_id=1037502254]
 layout_mode = 0
