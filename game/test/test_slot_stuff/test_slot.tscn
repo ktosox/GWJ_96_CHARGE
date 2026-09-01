@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dytiiyh36t58a"]
+
+[ext_resource type="Script" uid="uid://ifuhl7datsfn" path="res://test/test_slot_stuff/test_slot.gd" id="1_ehvd5"]
+[ext_resource type="PackedScene" uid="uid://bdlnotkqygti3" path="res://test/test_slot_stuff/test_line_connector.tscn" id="2_qirgt"]
+
+[node name="TestSlot" type="Node2D" unique_id=2111704344]
+script = ExtResource("1_ehvd5")
+
+[node name="ConnectorHolder" type="Node2D" parent="." unique_id=1076810768]
+
+[node name="TestLineConnectorNorth" parent="ConnectorHolder" unique_id=746157076 instance=ExtResource("2_qirgt")]
+position = Vector2(0, -25)
+
+[node name="TestLineConnectorSouth" parent="ConnectorHolder" unique_id=13018607 instance=ExtResource("2_qirgt")]
+position = Vector2(0, 25)
+
+[node name="TestLineConnectorEast" parent="ConnectorHolder" unique_id=581122778 instance=ExtResource("2_qirgt")]
+position = Vector2(25, 0)
+
+[node name="TestLineConnectorWest" parent="ConnectorHolder" unique_id=4278712 instance=ExtResource("2_qirgt")]
+position = Vector2(-25, 0)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1768298403]
+color = Color(0.4674623, 0.0027278585, 0.8250101, 1)
+polygon = PackedVector2Array(-25, 25, -25, -25, 25, -25, 25, 25)

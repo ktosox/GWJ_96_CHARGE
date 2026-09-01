@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://doh6udh7nyvcp"]
 
-[node name="TestShipLogic" type="Control" unique_id=1881262465]
+[ext_resource type="Script" uid="uid://2t7a0fj7bnvl" path="res://test/test_ship_logic.gd" id="1_a1oo5"]
+
+[node name="TestShipLogic" type="Control" unique_id=1881262465 node_paths=PackedStringArray("all_components")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_a1oo5")
+all_components = [null]
 
 [node name="Todo" type="Label" parent="." unique_id=1247203701]
 layout_mode = 0
@@ -15,3 +19,11 @@ offset_bottom = 23.0
 text = "needs to show slots and connections
 needs to show progress of power
 needs to place  card consumers"
+
+[node name="Button" type="Button" parent="." unique_id=725163298]
+layout_mode = 0
+offset_left = 1067.0
+offset_top = 26.0
+offset_right = 1193.0
+offset_bottom = 57.0
+text = "start generator"

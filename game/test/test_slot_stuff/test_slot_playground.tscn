@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cng8ytivw2pd3"]
+
+[ext_resource type="PackedScene" uid="uid://dytiiyh36t58a" path="res://test/test_slot_stuff/test_slot.tscn" id="1_nd4ga"]
+[ext_resource type="Script" uid="uid://b5je871mlfrx6" path="res://test/test_slot_stuff/test_slot_playground.gd" id="1_woxgu"]
+
+[node name="TestSlotPlayground" type="Control" unique_id=713660142]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_woxgu")
+
+[node name="TestSlot" parent="." unique_id=2111704344 instance=ExtResource("1_nd4ga")]
+position = Vector2(1027, 322)
+
+[node name="TestSlot2" parent="." unique_id=505696184 instance=ExtResource("1_nd4ga")]
+position = Vector2(517, 307)
+
+[node name="TestSlot3" parent="." unique_id=1158710453 instance=ExtResource("1_nd4ga")]
+position = Vector2(653, 568)
