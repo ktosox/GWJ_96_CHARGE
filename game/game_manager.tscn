@@ -11,6 +11,15 @@ script = ExtResource("2_smx3j")
 name = "test ship"
 metadata/_custom_type_script = "uid://bpc7pojq2jkg0"
 
+[sub_resource type="Resource" id="Resource_vk86k"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+type = 1
+name = "he bue bue bue"
+illustration = ExtResource("5_shwjl")
+description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
 [sub_resource type="Resource" id="Resource_shwjl"]
 resource_local_to_scene = true
 script = ExtResource("6_eakoi")
@@ -20,22 +29,31 @@ illustration = ExtResource("5_shwjl")
 description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
 metadata/_custom_type_script = "uid://bumkj2560ahrl"
 
-[sub_resource type="Resource" id="Resource_8jrwq"]
-resource_local_to_scene = true
-script = ExtResource("6_eakoi")
-type = 1
-name = "he bue bue bue"
-illustration = ExtResource("5_shwjl")
-description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
-metadata/_custom_type_script = "uid://bumkj2560ahrl"
-
-[sub_resource type="Resource" id="Resource_gth8u"]
+[sub_resource type="Resource" id="Resource_eakoi"]
 resource_local_to_scene = true
 script = ExtResource("6_eakoi")
 name = "he bue bue bue"
 energy_cost = 2
 illustration = ExtResource("5_shwjl")
 description = "test test test"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_8jrwq"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+name = "he bue bue bue"
+energy_cost = 2
+illustration = ExtResource("5_shwjl")
+description = "test test test"
+metadata/_custom_type_script = "uid://bumkj2560ahrl"
+
+[sub_resource type="Resource" id="Resource_gth8u"]
+resource_local_to_scene = true
+script = ExtResource("6_eakoi")
+type = 1
+name = "he bue bue bue"
+illustration = ExtResource("5_shwjl")
+description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
 metadata/_custom_type_script = "uid://bumkj2560ahrl"
 
 [sub_resource type="Resource" id="Resource_dq8jp"]
@@ -50,19 +68,19 @@ metadata/_custom_type_script = "uid://bumkj2560ahrl"
 [sub_resource type="Resource" id="Resource_yawsv"]
 resource_local_to_scene = true
 script = ExtResource("6_eakoi")
-type = 1
 name = "he bue bue bue"
+energy_cost = 2
 illustration = ExtResource("5_shwjl")
-description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
+description = "test test test"
 metadata/_custom_type_script = "uid://bumkj2560ahrl"
 
 [sub_resource type="Resource" id="Resource_le433"]
 resource_local_to_scene = true
 script = ExtResource("6_eakoi")
+type = 1
 name = "he bue bue bue"
-energy_cost = 2
 illustration = ExtResource("5_shwjl")
-description = "test test test"
+description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
 metadata/_custom_type_script = "uid://bumkj2560ahrl"
 
 [sub_resource type="Resource" id="Resource_2tadr"]
@@ -77,19 +95,19 @@ metadata/_custom_type_script = "uid://bumkj2560ahrl"
 [sub_resource type="Resource" id="Resource_tmn8n"]
 resource_local_to_scene = true
 script = ExtResource("6_eakoi")
-type = 1
 name = "he bue bue bue"
+energy_cost = 2
 illustration = ExtResource("5_shwjl")
-description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
+description = "test test test"
 metadata/_custom_type_script = "uid://bumkj2560ahrl"
 
 [sub_resource type="Resource" id="Resource_es4nv"]
 resource_local_to_scene = true
 script = ExtResource("6_eakoi")
+type = 1
 name = "he bue bue bue"
-energy_cost = 2
 illustration = ExtResource("5_shwjl")
-description = "test test test"
+description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
 metadata/_custom_type_script = "uid://bumkj2560ahrl"
 
 [sub_resource type="Resource" id="Resource_anra8"]
@@ -104,19 +122,19 @@ metadata/_custom_type_script = "uid://bumkj2560ahrl"
 [sub_resource type="Resource" id="Resource_f0lch"]
 resource_local_to_scene = true
 script = ExtResource("6_eakoi")
-type = 1
 name = "he bue bue bue"
+energy_cost = 2
 illustration = ExtResource("5_shwjl")
-description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
+description = "test test test"
 metadata/_custom_type_script = "uid://bumkj2560ahrl"
 
 [sub_resource type="Resource" id="Resource_lx373"]
 resource_local_to_scene = true
 script = ExtResource("6_eakoi")
+type = 1
 name = "he bue bue bue"
-energy_cost = 2
 illustration = ExtResource("5_shwjl")
-description = "test test test"
+description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
 metadata/_custom_type_script = "uid://bumkj2560ahrl"
 
 [sub_resource type="Resource" id="Resource_s6dek"]
@@ -129,24 +147,6 @@ description = "test test test"
 metadata/_custom_type_script = "uid://bumkj2560ahrl"
 
 [sub_resource type="Resource" id="Resource_d246e"]
-resource_local_to_scene = true
-script = ExtResource("6_eakoi")
-type = 1
-name = "he bue bue bue"
-illustration = ExtResource("5_shwjl")
-description = "he bue bue bue assa dadadsd adasdad adaaad he bue bue bue asdsa he bue bue bue assa he bue bue bue"
-metadata/_custom_type_script = "uid://bumkj2560ahrl"
-
-[sub_resource type="Resource" id="Resource_nvy02"]
-resource_local_to_scene = true
-script = ExtResource("6_eakoi")
-name = "he bue bue bue"
-energy_cost = 2
-illustration = ExtResource("5_shwjl")
-description = "test test test"
-metadata/_custom_type_script = "uid://bumkj2560ahrl"
-
-[sub_resource type="Resource" id="Resource_7bexq"]
 resource_local_to_scene = true
 script = ExtResource("6_eakoi")
 name = "he bue bue bue"
@@ -168,7 +168,7 @@ grow_vertical = 2
 
 [node name="CardEditingThing0" parent="CardEditor" unique_id=1742103350 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_shwjl")
+card_data = SubResource("Resource_vk86k")
 
 [node name="CostField" parent="CardEditor/CardEditingThing0" index="1" unique_id=1740874865]
 text = "1"
@@ -178,7 +178,7 @@ button_pressed = false
 
 [node name="CardEditingThing1" parent="CardEditor" unique_id=1894541364 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_8jrwq")
+card_data = SubResource("Resource_shwjl")
 
 [node name="CostField" parent="CardEditor/CardEditingThing1" index="1" unique_id=1740874865]
 text = "1"
@@ -188,7 +188,7 @@ button_pressed = false
 
 [node name="CardEditingThing2" parent="CardEditor" unique_id=137667816 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_gth8u")
+card_data = SubResource("Resource_eakoi")
 
 [node name="CostField" parent="CardEditor/CardEditingThing2" index="1" unique_id=1740874865]
 text = "2"
@@ -198,7 +198,7 @@ text = "test test test"
 
 [node name="CardEditingThing3" parent="CardEditor" unique_id=1665994995 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_dq8jp")
+card_data = SubResource("Resource_8jrwq")
 
 [node name="CostField" parent="CardEditor/CardEditingThing3" index="1" unique_id=1740874865]
 text = "2"
@@ -208,7 +208,7 @@ text = "test test test"
 
 [node name="CardEditingThing4" parent="CardEditor" unique_id=1692124199 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_yawsv")
+card_data = SubResource("Resource_gth8u")
 
 [node name="CostField" parent="CardEditor/CardEditingThing4" index="1" unique_id=1740874865]
 text = "1"
@@ -218,7 +218,7 @@ button_pressed = false
 
 [node name="CardEditingThing5" parent="CardEditor" unique_id=372823236 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_le433")
+card_data = SubResource("Resource_dq8jp")
 
 [node name="CostField" parent="CardEditor/CardEditingThing5" index="1" unique_id=1740874865]
 text = "2"
@@ -228,7 +228,7 @@ text = "test test test"
 
 [node name="CardEditingThing6" parent="CardEditor" unique_id=1158178300 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_2tadr")
+card_data = SubResource("Resource_yawsv")
 
 [node name="CostField" parent="CardEditor/CardEditingThing6" index="1" unique_id=1740874865]
 text = "2"
@@ -238,7 +238,7 @@ text = "test test test"
 
 [node name="CardEditingThing7" parent="CardEditor" unique_id=1845872980 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_tmn8n")
+card_data = SubResource("Resource_le433")
 
 [node name="CostField" parent="CardEditor/CardEditingThing7" index="1" unique_id=1740874865]
 text = "1"
@@ -248,7 +248,7 @@ button_pressed = false
 
 [node name="CardEditingThing8" parent="CardEditor" unique_id=226779939 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_es4nv")
+card_data = SubResource("Resource_2tadr")
 
 [node name="CostField" parent="CardEditor/CardEditingThing8" index="1" unique_id=1740874865]
 text = "2"
@@ -258,7 +258,7 @@ text = "test test test"
 
 [node name="CardEditingThing9" parent="CardEditor" unique_id=463837466 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_anra8")
+card_data = SubResource("Resource_tmn8n")
 
 [node name="CostField" parent="CardEditor/CardEditingThing9" index="1" unique_id=1740874865]
 text = "2"
@@ -268,7 +268,7 @@ text = "test test test"
 
 [node name="CardEditingThing10" parent="CardEditor" unique_id=282222979 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_f0lch")
+card_data = SubResource("Resource_es4nv")
 
 [node name="CostField" parent="CardEditor/CardEditingThing10" index="1" unique_id=1740874865]
 text = "1"
@@ -278,7 +278,7 @@ button_pressed = false
 
 [node name="CardEditingThing11" parent="CardEditor" unique_id=1014143585 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_lx373")
+card_data = SubResource("Resource_anra8")
 
 [node name="CostField" parent="CardEditor/CardEditingThing11" index="1" unique_id=1740874865]
 text = "2"
@@ -288,7 +288,7 @@ text = "test test test"
 
 [node name="CardEditingThing12" parent="CardEditor" unique_id=2114927664 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_s6dek")
+card_data = SubResource("Resource_f0lch")
 
 [node name="CostField" parent="CardEditor/CardEditingThing12" index="1" unique_id=1740874865]
 text = "2"
@@ -298,7 +298,7 @@ text = "test test test"
 
 [node name="CardEditingThing13" parent="CardEditor" unique_id=1174391723 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_d246e")
+card_data = SubResource("Resource_lx373")
 
 [node name="CostField" parent="CardEditor/CardEditingThing13" index="1" unique_id=1740874865]
 text = "1"
@@ -308,7 +308,7 @@ button_pressed = false
 
 [node name="CardEditingThing14" parent="CardEditor" unique_id=1663440043 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_nvy02")
+card_data = SubResource("Resource_s6dek")
 
 [node name="CostField" parent="CardEditor/CardEditingThing14" index="1" unique_id=1740874865]
 text = "2"
@@ -318,7 +318,7 @@ text = "test test test"
 
 [node name="CardEditingThing15" parent="CardEditor" unique_id=1585272756 instance=ExtResource("5_vk86k")]
 layout_mode = 2
-card_data = SubResource("Resource_7bexq")
+card_data = SubResource("Resource_d246e")
 
 [node name="CostField" parent="CardEditor/CardEditingThing15" index="1" unique_id=1740874865]
 text = "2"

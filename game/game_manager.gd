@@ -1,6 +1,7 @@
 extends Node
 
-# needs to store data that persists between matches
+# manages top level game flow
+# stores data that needs to persists outside of matches
 
 signal error_thrown(error_text : String)
 

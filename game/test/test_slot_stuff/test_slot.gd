@@ -6,7 +6,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for connector in $ConnectorHolder.get_children():
+	for connector in $CableHolder.get_children():
 		connector.connect("got_clicked",allow_drag)
 	pass # Replace with function body.
 
