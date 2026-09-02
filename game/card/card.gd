@@ -4,7 +4,8 @@ var selected = false
 
 var grabbed = false
 
-#var mouse_offset : Vector2
+@onready var mouse_offset = get_minimum_size() / 2 
+@onready var select_offset = $Area2D.position #- ($Area2D/CollisionShape2D.shape.size)/2
 
 @export var card_body : ColorRect
 
@@ -14,6 +15,7 @@ var grabbed = false
 @export var type_label : Label
 @export var card_data : CardData
 
+var test_delta = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -33,6 +35,15 @@ func load_card_data(data : CardData):
 	pass
 
 
+func _process(delta: float) -> void:
+	if selected:
+		var desired_pos = Vector2(0,-180) + (get_local_mouse_position() - select_offset)*0.4
+		$CardBody.offset_transform_position = $CardBody.offset_transform_position.move_toward(desired_pos,delta*1500) 
+	#test_delta += delta
+	#if test_delta > 0.5 :
+		#test_delta = 0
+		#print(mouse_offset)
+		#print(get_local_mouse_position())
 
 func announce_grab():
 	var all_other_cards = get_tree().get_nodes_in_group("Card")
@@ -60,7 +71,7 @@ func _input(event: InputEvent) -> void:
 func grab():
 	grabbed = true
 	announce_grab()
-	#mouse_offset = get_local_mouse_position()
+	
 
 	var test_preview = CenterContainer.new()
 	test_preview.use_top_left = true
@@ -81,12 +92,13 @@ func grab():
 func un_grab():
 	visible = true
 	grabbed = false
-	
+	$CardBody.offset_transform_position = (get_local_mouse_position() - mouse_offset) 
 	var all_other_cards = get_tree().get_nodes_in_group("card_in_hand")
 	all_other_cards.erase(self)
 	for card in all_other_cards:
 		card.unlock_select()
 	de_select()
+	
 	pass
 
 func lock_select():
@@ -100,6 +112,7 @@ func unlock_select():
 func de_select():
 	selected = false
 	card_body.z_index = 0
+	
 
 	$CardAnimator.play("de-select")
 	pass

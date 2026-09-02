@@ -30,6 +30,7 @@ window/size/viewport_height=720
 card_in_hand=""
 SOT_listener=""
 EOT_listener=""
+connector=""
 
 [input]
 

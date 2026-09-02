@@ -5,7 +5,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_7o1av"]
 radius = 12.0
 
-[node name="TestLineConnector" type="Area2D" unique_id=746157076]
+[node name="TestLineConnector" type="Area2D" unique_id=746157076 groups=["connector"]]
 script = ExtResource("1_oqwpb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1669837363]
