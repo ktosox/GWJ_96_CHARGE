@@ -1,4 +1,4 @@
-class_name SegmentBase
+class_name Segment
 extends Node3D
 
 enum SegmentType {FRONT,MIDDLE,ENIGNE}
