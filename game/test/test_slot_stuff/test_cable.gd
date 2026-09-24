@@ -9,85 +9,9 @@ signal got_clicked(connector : Node2D)
 
 # neesd to figure out the preview / snap interaction between 2 Cables
 
-<<<<<<< HEAD
-var drag_follow_mouse = false
-
-
-
-var can_drop_connection = false
-
-@export var has_connection = false
-
-@export var can_accept_connection = true
-
-var current_preivew_target : Node2D
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	$ConnectionCarrier.set_meta("owner",self)
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if drag_follow_mouse:
-		$DragLine.set_point_position(1,get_local_mouse_position())
-		$ConnectionCarrier.position = get_local_mouse_position()
-		var shape = $DragIntersectionDetector/IntersectionBox.shape as SegmentShape2D
-		shape.b = get_local_mouse_position()
-	pass
-
-func _input(event: InputEvent) -> void:
-	if event.is_class("InputEventMouseButton") and !event.is_pressed() and drag_follow_mouse:
-		end_line_drag()
-
-func show_connection_availability():
-	if can_accept_connection:
-		$ConnectorBase.modulate = Color("Green")
-	else:
-		$ConnectorBase.modulate = Color("Red")
-	pass
-	
-func hide_connection_availability():
-	$ConnectorBase.modulate = Color("White")
-
-func start_preview():
-	$DragLine.modulate = Color("Green")
-	$DragLine.set_point_position(1,current_preivew_target.global_position - global_position)
-	current_preivew_target.get_node("DragLine").visible = false
-	# starts when a foreign Carrier enters a local Acceptor
-	pass
-
-func end_preview():
-	$DragLine.modulate = Color("White")
-	$DragLine.set_point_position(1,Vector2.ZERO)
-	current_preivew_target.get_node("DragLine").visible = true
-	# when Acceptor that started the preview leaves this is activated
-	pass
-
-
-
-func accept_connection(source : Node2D):
-	can_accept_connection = false
-	has_connection = true
-	$DragLine.set_point_position(1,source.global_position)
-
-	pass
-
-func cancel_connection():
-	can_accept_connection = true
-	has_connection = false
-	pass
-
-func start_line_drag():
-	drag_follow_mouse = true
-	var other_connectors = get_tree().get_nodes_in_group("connector")
-	other_connectors.erase(self)
-	for connector in other_connectors:
-		connector.show_connection_availability()
-=======
 # solution to edge cases: add a ray cast when darg starts, make the connections that failed gray rather than green
 
+
 var drag_follow_mouse = false
 
 
@@ -108,7 +32,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
 	if drag_follow_mouse:
 		$DragLine.set_point_position(1,get_local_mouse_position())
 		$ConnectionCarrier.position = get_local_mouse_position()
@@ -177,7 +100,6 @@ func start_line_drag():
 	other_connectors.erase(self)
 	for connector in other_connectors:
 		connector.show_connection_availability(self)
->>>>>>> branch 'temp' of https://github.com/ktosox/GWJ_96_CHARGE
 	pass
 
 func end_line_drag():
