@@ -57,6 +57,11 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ConnectionCarrier" unique_id=1029156328]
 shape = SubResource("CircleShape2D_aobkh")
 
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1070142777]
+exclude_parent = false
+target_position = Vector2(500, 0)
+collision_mask = 16
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="body_entered" from="DragIntersectionDetector" to="." method="_on_drag_intersection_detector_body_entered"]
 [connection signal="body_exited" from="DragIntersectionDetector" to="." method="_on_drag_intersection_detector_body_exited"]

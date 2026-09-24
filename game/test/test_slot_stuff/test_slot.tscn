@@ -18,17 +18,17 @@ shape = SubResource("RectangleShape2D_1qhx3")
 
 [node name="CableHolder" type="Node2D" parent="." unique_id=1076810768]
 
-[node name="TestLineConnectorNorth" parent="CableHolder" unique_id=746157076 instance=ExtResource("2_qirgt")]
-position = Vector2(0, -30)
-
-[node name="TestLineConnectorSouth" parent="CableHolder" unique_id=13018607 instance=ExtResource("2_qirgt")]
-position = Vector2(0, 30)
-
-[node name="TestLineConnectorEast" parent="CableHolder" unique_id=581122778 instance=ExtResource("2_qirgt")]
+[node name="TestCable4" parent="CableHolder" unique_id=746157076 instance=ExtResource("2_qirgt")]
 position = Vector2(30, 0)
 
-[node name="TestLineConnectorWest" parent="CableHolder" unique_id=4278712 instance=ExtResource("2_qirgt")]
+[node name="TestCable" parent="CableHolder" unique_id=840911651 instance=ExtResource("2_qirgt")]
 position = Vector2(-30, 0)
+
+[node name="TestCable3" parent="CableHolder" unique_id=332405759 instance=ExtResource("2_qirgt")]
+position = Vector2(0, 30)
+
+[node name="TestCable2" parent="CableHolder" unique_id=1300042763 instance=ExtResource("2_qirgt")]
+position = Vector2(0, -30)
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1768298403]
 color = Color(0.4674623, 0.0027278585, 0.8250101, 1)

@@ -9,6 +9,8 @@ signal got_clicked(connector : Node2D)
 
 # neesd to figure out the preview / snap interaction between 2 Cables
 
+# solution to edge cases: add a ray cast when darg starts, make the connections that failed gray rather than green
+
 var drag_follow_mouse = false
 
 
@@ -29,6 +31,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	if drag_follow_mouse:
 		$DragLine.set_point_position(1,get_local_mouse_position())
 		$ConnectionCarrier.position = get_local_mouse_position()
@@ -40,15 +43,27 @@ func _input(event: InputEvent) -> void:
 	if event.is_class("InputEventMouseButton") and !event.is_pressed() and drag_follow_mouse:
 		end_line_drag()
 
-func show_connection_availability():
-	if can_accept_connection:
-		$ConnectorBase.modulate = Color("Green")
-	else:
+func show_connection_availability(caller : Node2D):
+	$RayCast2D.target_position = caller.global_position - global_position
+	$RayCast2D.force_raycast_update()
+	print("a")
+	if !can_accept_connection:
 		$ConnectorBase.modulate = Color("Red")
+		return
+	print("b")
+	
+	if $RayCast2D.get_collider() != null:
+		$ConnectorBase.modulate = Color("Gray")
+		$ConnectionAcceptor/CollisionShape2D.disabled = true
+		return
+	print("c")
+	$ConnectorBase.modulate = Color("Green")
+
 	pass
 	
 func hide_connection_availability():
 	$ConnectorBase.modulate = Color("White")
+	$ConnectionAcceptor/CollisionShape2D.disabled = false
 
 func start_preview():
 	$DragLine.modulate = Color("Green")
@@ -79,11 +94,12 @@ func cancel_connection():
 	pass
 
 func start_line_drag():
+	
 	drag_follow_mouse = true
 	var other_connectors = get_tree().get_nodes_in_group("connector")
 	other_connectors.erase(self)
 	for connector in other_connectors:
-		connector.show_connection_availability()
+		connector.show_connection_availability(self)
 	pass
 
 func end_line_drag():
