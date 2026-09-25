@@ -46,17 +46,17 @@ func _input(event: InputEvent) -> void:
 func show_connection_availability(caller : Node2D):
 	$RayCast2D.target_position = caller.global_position - global_position
 	$RayCast2D.force_raycast_update()
-	print("a")
+
 	if !can_accept_connection:
 		$ConnectorBase.modulate = Color("Red")
 		return
-	print("b")
+
 	
 	if $RayCast2D.get_collider() != null:
 		$ConnectorBase.modulate = Color("Gray")
 		$ConnectionAcceptor/CollisionShape2D.disabled = true
 		return
-	print("c")
+
 	$ConnectorBase.modulate = Color("Green")
 
 	pass
@@ -130,7 +130,7 @@ func _on_connection_acceptor_area_entered(area: Area2D) -> void:
 		return
 	current_preivew_target = area.get_meta("owner") as Node2D
 	start_preview()
-	print("hello", current_preivew_target)
+
 	pass # Replace with function body.
 
 
@@ -139,7 +139,7 @@ func _on_connection_acceptor_area_exited(area: Area2D) -> void:
 		return
 	assert(current_preivew_target == area.get_meta("owner"))
 	end_preview()
-	print("bye", current_preivew_target)
+
 	pass # Replace with function body.
 
 
@@ -150,6 +150,8 @@ func _on_drag_intersection_detector_body_entered(body: Node2D) -> void:
 
 
 func _on_drag_intersection_detector_body_exited(body: Node2D) -> void:
+	if $DragIntersectionDetector.get_overlapping_bodies().size() != 0:
+		return
 	$ConnectionCarrier/CollisionShape2D.set_deferred("disabled", false)
 	$DragLine.modulate = Color("White")
 	pass # Replace with function body.
